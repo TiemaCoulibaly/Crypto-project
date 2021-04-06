@@ -1,9 +1,9 @@
 # Portefeuille électronique
 
-* Présentation du projet
-* Définition des objectifs
-* Décrire le public visé
-* Décrire les fonctionnalités
+- Présentation du projet
+- Définition des objectifs
+- Décrire le public visé
+- Décrire les fonctionnalités
 
 ### Présentation du projet
 
@@ -12,15 +12,16 @@ L'application sera pensée mobile-first mais sera responsive.
 
 ### Définition des objectifs
 
-* Proposer une interface soignée et épurée, avec une lecture facile des données pour l'utilisateur
-* Mettre en place un système d'authentification avec création et gestion de compte, ainsi que la sécurité.
-* Récupérer les données suivantes :
-    * Les différents cours via API https://coinmarketcap.com/ https://www.luno.com/en/developers
-    * Les graphiques via ChartJS
+- Proposer une interface soignée et épurée, avec une lecture facile des données pour l'utilisateur
+- Mettre en place un système d'authentification avec création et gestion de compte, ainsi que la sécurité.
+- Récupérer les données suivantes :
 
-* (Optionnel) Effectuer des transactions via blockchain
-* (Optionnel) Système de chat
+  - Les différents cours via API https://coinmarketcap.com/ https://www.luno.com/en/developers
+  - Les graphiques via ChartJS
 
+- (Optionnel) Effectuer des transactions via blockchain
+- (Optionnel) Système de chat
+
+TestMath
 
 ### Décrire le public visé
-
