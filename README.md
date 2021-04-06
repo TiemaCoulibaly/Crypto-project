@@ -24,3 +24,8 @@ L'application sera pensée mobile-first mais sera responsive.
 -   (Optionnel) Système de chat
 
 ### Décrire le public visé
+
+
+pour les utilisateurs
+
+
