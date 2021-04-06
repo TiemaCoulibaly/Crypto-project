@@ -22,6 +22,6 @@ L'application sera pensée mobile-first mais sera responsive.
 - (Optionnel) Effectuer des transactions via blockchain
 - (Optionnel) Système de chat
 
-TestMath
-
 ### Décrire le public visé
+
+Les utilisateurs, mobiles ou non, intéressés par les cryptomonnaies.
