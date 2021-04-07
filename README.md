@@ -1,6 +1,5 @@
 # Portefeuille électronique
 
--   Second Test
 -   Présentation du projet
 -   Définition des objectifs
 -   Décrire le public visé

@@ -1,0 +1,32 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+header nav ul {
+  display: flex;
+  justify-content: space-evenly;
+}
+header nav li {
+  list-style: none;
+}
+header nav a {
+  text-decoration: none;
+}
+
+article {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-evenly;
+}
+article figure {
+  border: 2px solid black;
+  padding: 40px;
+}
+
+footer {
+  text-align: center;
+}
+
+/*# sourceMappingURL=styles.css.map */
