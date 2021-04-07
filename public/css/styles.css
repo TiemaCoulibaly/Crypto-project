@@ -1,0 +1,19 @@
+body {
+  background-color: #1C1E27;
+  color: white;
+}
+
+h1 {
+  color: #52B6B2;
+}
+
+li {
+  list-style-type: none;
+}
+
+.currency__logo {
+  width: 3%;
+  height: 3%;
+}
+
+/*# sourceMappingURL=styles.css.map */
