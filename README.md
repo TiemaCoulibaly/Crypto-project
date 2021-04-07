@@ -1,9 +1,9 @@
 # Portefeuille électronique
 
-- Présentation du projet
-- Définition des objectifs
-- Décrire le public visé
-- Décrire les fonctionnalités
+-   Présentation du projet
+-   Définition des objectifs
+-   Décrire le public visé
+-   Décrire les fonctionnalités
 
 ### Présentation du projet
 
