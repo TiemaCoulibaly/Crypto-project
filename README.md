@@ -12,14 +12,16 @@ L'application sera pensée mobile-first mais sera responsive.
 
 ### Définition des objectifs
 
--   Proposer une interface soignée et épurée, avec une lecture facile des données pour l'utilisateur
--   Mettre en place un système d'authentification avec création et gestion de compte, ainsi que la sécurité.
--   Récupérer les données suivantes :
+- Proposer une interface soignée et épurée, avec une lecture facile des données pour l'utilisateur
+- Mettre en place un système d'authentification avec création et gestion de compte, ainsi que la sécurité.
+- Récupérer les données suivantes :
 
-    -   Les différents cours via API https://coinmarketcap.com/ https://www.luno.com/en/developers
-    -   Les graphiques via ChartJS
+  - Les différents cours via API https://coinmarketcap.com/ https://www.luno.com/en/developers
+  - Les graphiques via ChartJS
 
--   (Optionnel) Effectuer des transactions via blockchain
--   (Optionnel) Système de chat
+- (Optionnel) Effectuer des transactions via blockchain
+- (Optionnel) Système de chat
 
 ### Décrire le public visé
+
+Les utilisateurs, mobiles ou non, intéressés par les cryptomonnaies.
