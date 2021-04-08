@@ -1,24 +1,26 @@
 @charset "UTF-8";
 
 
-@import
-  "abstracts/variables";
-  
+
+@import "abstracts/variables";
+
+@import "components/index";
 
 body {
-    background-color: $background-color;
-    color: $primary-color;
+	background-color: $background-color;
+	color: $primary-color;
 }
 
 h1 {
-    color: $special-color;
+	color: $special-color;
 }
 
 li {
-    list-style-type: none;
+	list-style-type: none;
 }
 
 .currency__logo {
-    width: 3%;
-    height: 3%;
+	width: 3%;
+	height: 3%;
 }
+

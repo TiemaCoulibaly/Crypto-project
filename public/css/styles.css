@@ -1,0 +1,123 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+header nav ul {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+header nav li {
+  list-style: none;
+}
+header nav a {
+  text-decoration: none;
+  color: white;
+}
+header nav img {
+  height: 200px;
+  width: 200px;
+}
+
+main > article {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-evenly;
+}
+main > article figure {
+  border-radius: 10px;
+  border: 2px solid #3d3d3d;
+  background-color: #1f212b;
+  padding: 40px;
+}
+main > article figure:hover {
+  box-shadow: 2px 2px 2px #52b6b2;
+}
+
+.details {
+  margin-top: 100px;
+  background-color: #1f212b;
+  border: 1px solid #3d3d3d;
+  padding: 70px;
+}
+.details h2 {
+  text-align: center;
+}
+.details p {
+  padding: 20px 150px 0px;
+}
+
+footer {
+  text-align: center;
+  margin-top: 100px;
+}
+
+/* media queris  */
+body {
+  background-color: #1c1e27;
+  color: white;
+}
+
+h1 {
+  color: #52b6b2;
+}
+
+li {
+  list-style-type: none;
+}
+
+.currency__logo {
+  width: 3%;
+  height: 3%;
+}
+
+/* style wallet */
+.wallet {
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+
+.wallet > h2 {
+  font-weight: lighter;
+}
+
+.wallet > p > button {
+  width: 60px;
+  background-color: #1c1e27;
+  color: white;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 30px;
+  border-color: white;
+  padding: 3px;
+  margin: 8px;
+}
+
+.wallet > p > button:hover {
+  background-color: white;
+  color: #1c1e27;
+}
+
+.evolution {
+  background-image: linear-gradient(to right, #52b6b2, #2c696b);
+  color: white;
+  font-size: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  border-radius: 10px;
+  font-weight: lighter;
+}
+
+.balance {
+  font-size: 70px;
+  font-weight: bold;
+}
+
+/*# sourceMappingURL=styles.css.map */
