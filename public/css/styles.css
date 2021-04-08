@@ -19,8 +19,8 @@ header nav li {
   list-style: none;
 }
 header nav .list-item {
+  border: 1px solid #3d3d3d;
   padding: 10px;
-  border: 2px solid #3d3d3d;
   border-radius: 10px;
   background-color: #1f212b;
 }
@@ -51,9 +51,10 @@ main > article {
   justify-content: space-evenly;
 }
 main > article figure {
+  border: 1px solid #3d3d3d;
   border-radius: 10px;
-  border: 2px solid #3d3d3d;
   background-color: #1f212b;
+  color: white;
   padding: 40px;
 }
 main > article figure:hover {
@@ -87,7 +88,7 @@ main > article figure:hover {
 }
 
 figcaption {
-  background-color: #52b6b2;
+  background-image: linear-gradient(to right, #52b6b2, #2c696b);
   border-radius: 10px;
   padding: 7px;
   margin: 5px;
@@ -95,10 +96,11 @@ figcaption {
 }
 
 .details {
+  border: 1px solid #3d3d3d;
   margin-top: 100px;
   background-color: #1f212b;
-  border: 1px solid #3d3d3d;
   padding: 70px;
+  color: white;
 }
 .details h2 {
   text-align: center;
@@ -116,6 +118,7 @@ figcaption {
 footer {
   text-align: center;
   margin-top: 50px;
+  color: white;
 }
 
 /* style wallet */
