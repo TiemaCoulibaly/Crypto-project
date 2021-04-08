@@ -1,0 +1,24 @@
+@charset "UTF-8";
+
+
+@import
+  "abstracts/variables";
+  
+
+body {
+    background-color: $background-color;
+    color: $primary-color;
+}
+
+h1 {
+    color: $special-color;
+}
+
+li {
+    list-style-type: none;
+}
+
+.currency__logo {
+    width: 3%;
+    height: 3%;
+}
