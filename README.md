@@ -25,3 +25,18 @@ L'application sera pensée mobile-first mais sera responsive.
 ### Décrire le public visé
 
 Les utilisateurs, mobiles ou non, intéressés par les cryptomonnaies.
+
+### Commandes
+
+- SASS :
+```sh
+sass src/main.scss public/css/styles.css
+```
+
+```sh
+sass src/main.scss public/css/styles.css --watch
+```
+
+- Git :
+  git remote add upstream https://github.com/Mehdi-Adel/Crypto-project.git
+  git pull upstream main
