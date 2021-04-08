@@ -73,70 +73,23 @@ li {
   height: 3%;
 }
 
-/* style wallet */
-.wallet {
-  font-family: Arial, Helvetica, sans-serif;
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
-  align-items: center;
-}
-
-.wallet > h2 {
-  font-weight: lighter;
-}
-
-.wallet > p > button {
-  width: 60px;
-  background-color: #1c1e27;
-  color: white;
-  border-style: solid;
-  border-width: 1px;
-  border-radius: 30px;
-  border-color: white;
-  padding: 3px;
-  margin: 8px;
-}
-
-.wallet > p > button:hover {
-  background-color: white;
-  color: #1c1e27;
-}
-
-.evolution {
-  background-image: linear-gradient(to right, #52b6b2, #2c696b);
-  color: white;
-  font-size: 40px;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-top: 6px;
-  padding-bottom: 6px;
-  border-radius: 10px;
-  font-weight: lighter;
-}
-
-.balance {
-  font-size: 70px;
-  font-weight: bold;
-}
-
 /*********css LOGIN*********************/
-
-
-#container{
-  width:400px;
-  margin:0 auto;
-  margin-top:10%;
+#container {
+  width: 400px;
+  margin: 0 auto;
+  margin-top: 10%;
 }
+
 /* Bordered form */
 form {
-  width:100%;
+  width: 100%;
   padding: 30px;
   border: 1px solid #f1f1f1;
   background: #fff;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }
-#container h1{
+
+#container h1 {
   width: 38%;
   margin: 0 auto;
   padding-bottom: 10px;
@@ -164,6 +117,7 @@ input[type=text], input[type=password] {
   width: 100%;
   text-decoration: none;
 }
+
 .connexion:hover {
   background-color: white;
   color: #52b6b2;
