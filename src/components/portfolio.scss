@@ -2,7 +2,7 @@
 .wallet {
   /* width: 400px;
     height: 700px; */
-  background-color: red;
+  color: white;
   font-family: Arial, Helvetica, sans-serif;
   display: flex;
   flex-direction: column;
@@ -33,7 +33,7 @@
 }
 
 .evolution {
-  background-image: linear-gradient(to right, #52b6b2, #2c696b);
+  @include evol;
   color: white;
   font-size: 40px;
   padding-left: 20px;
@@ -47,4 +47,5 @@
 .balance {
   font-size: 70px;
   font-weight: bold;
+  color: white;
 }
