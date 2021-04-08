@@ -55,31 +55,17 @@ footer {
 }
 
 /* media queris  */
-body {
-  background-color: #1c1e27;
-  color: white;
-}
-
-h1 {
-  color: #52b6b2;
-}
-
-li {
-  list-style-type: none;
-}
-
-.currency__logo {
-  width: 3%;
-  height: 3%;
-}
-
 /* style wallet */
 .wallet {
+  /* width: 400px;
+    height: 700px; */
+
   font-family: Arial, Helvetica, sans-serif;
   display: flex;
   flex-direction: column;
-  justify-content: start;
+  justify-content: space-around;
   align-items: center;
+  border-style: dotted;
 }
 
 .wallet > h2 {
@@ -118,6 +104,24 @@ li {
 .balance {
   font-size: 70px;
   font-weight: bold;
+}
+
+body {
+  background-color: #1c1e27;
+  color: white;
+}
+
+h1 {
+  color: #52b6b2;
+}
+
+li {
+  list-style-type: none;
+}
+
+.currency__logo {
+  width: 3%;
+  height: 3%;
 }
 
 /*# sourceMappingURL=styles.css.map */
