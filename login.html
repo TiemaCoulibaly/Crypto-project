@@ -8,7 +8,7 @@
         <div id="container">
             <!-- zone de connexion -->
             
-            <form action="verification.php" method="POST">
+            <form >
                 <h1>Connexion</h1>
                 
                 <label><b>Nom d'utilisateur</b></label>
@@ -19,13 +19,7 @@
 
                 <!--input type="submit" src="http://127.0.0.1:5501/portfolio.html" id='submit' value='LOGIN'-->
                 <button class="connexion"><a href="http://127.0.0.1:5501/portfolio.html">LOGIN</a></button>
-                <?php
-                if(isset($_GET['erreur'])){
-                    $err = $_GET['erreur'];
-                    if($err==1 || $err==2)
-                        echo "<p style='color:red'>Utilisateur ou mot de passe incorrect</p>";
-                }
-                ?>
+                
             </form>
         </div>
     </body>
