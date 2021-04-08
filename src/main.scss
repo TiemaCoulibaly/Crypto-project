@@ -1,30 +1,20 @@
 @charset "UTF-8";
 
-@import "abstracts/variables";
+// Abstracts
+@import "abstracts/variables",
+		"abstracts/functions",
+		"abstracts/mixins";
 
-//Components
-@import "components/index";
+//  Base
+@import "base/body";
 
-@import "components/portfolio";
 
-body {
-	background-color: $background-color;
-	color: $primary-color;
-}
+// Components
+@import "components/index",
+		"components/portfolio";
 
-h1 {
-	color: $special-color;
-}
+// Layout
+@import "layout/currency-sidebar";
 
-li {
-	list-style-type: none;
-}
-
-.currency__name--logo {
-	width: 10%;
-}
-
-.currency__logo {
-	width: 3%;
-	height: 3%;
-}
+// Pages
+@import "pages/currency";
