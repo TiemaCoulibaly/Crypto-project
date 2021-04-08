@@ -1,8 +1,12 @@
 @charset "UTF-8";
 
+
+
 @import "abstracts/variables";
 
 @import "components/index";
+
+@import "components/portfolio";
 
 body {
   background-color: $background-color;
@@ -24,7 +28,8 @@ li {
 }
 
 .currency__logo {
-	width: 36%;
+	width: 50%;
+	height: 50%;
 }
 
 .currencies__list {
@@ -55,3 +60,4 @@ li {
 	}
   }
 }
+
