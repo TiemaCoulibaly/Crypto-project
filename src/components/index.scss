@@ -12,6 +12,21 @@ header nav {
 	li {
 		list-style: none;
 	}
+	.list-item {
+		padding: 10px;
+		border: 2px solid $border-color;
+		border-radius: 10px;
+		background-color: $background-color-light;
+		&:hover {
+			box-shadow: 2px 2px 2px $special-color;
+		}
+		@media screen and (max-width: 576px) {
+			&:hover {
+				box-shadow: 2px 2px 2px $special-color;
+			}
+			margin: auto;
+		}
+	}
 	a {
 		text-decoration: none;
 		color: white;
@@ -27,6 +42,7 @@ header nav {
 main > article {
 	margin-top: 50px;
 	display: flex;
+	flex-direction: row;
 	justify-content: space-evenly;
 
 	figure {
@@ -38,31 +54,64 @@ main > article {
 		&:hover {
 			box-shadow: 2px 2px 2px $special-color;
 		}
+		@media screen and (max-width: 576px) {
+			padding: 30px;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			&:hover {
+				box-shadow: none;
+			}
+		}
 	}
+
+	@media screen and (max-width: 576px) {
+		flex-direction: column;
+	}
+	@media screen and (min-width: 768px) {
+		flex-direction: row;
+	}
+
+	@media screen and (min-width: 992px) {
+		flex-direction: row;
+	}
+}
+
+figcaption {
+	background-color: $special-color;
+	border-radius: 10px;
+	padding: 7px;
+	margin: 5px;
+	width: 60px;
 }
 .details {
 	margin-top: 100px;
 	background-color: $background-color-light;
 	border: 1px solid $border-color;
 	padding: 70px;
+
 	h2 {
 		text-align: center;
 	}
 	p {
 		padding: 20px 150px 0px;
+		@media (max-width: 576px) {
+			padding: 10px;
+			text-align: center;
+		}
 	}
 }
 
 footer {
 	text-align: center;
-	margin-top: 100px;
-}
-/* media queris  */
-@media (min-width: 576px) {
+	margin-top: 50px;
 }
 
-@media (min-width: 768px) {
-}
+// @media (max-width: 576px) {
+// }
 
-@media screen and (min-width: 992px) {
-}
+// @media (min-width: 768px) {
+// }
+
+// @media screen and (min-width: 992px) {
+// }
