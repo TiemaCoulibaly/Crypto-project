@@ -62,23 +62,28 @@ main > article figure:hover {
 }
 @media screen and (max-width: 576px) {
   main > article figure {
-    padding: 30px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    padding: 10px;
+    margin-bottom: 5px;
   }
   main > article figure:hover {
     box-shadow: none;
   }
 }
+@media screen and (min-width: 768px) {
+  main > article figure {
+    margin-bottom: 5px;
+  }
+}
 @media screen and (max-width: 576px) {
   main > article {
     flex-direction: column;
+    align-items: center;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 768px) {
   main > article {
-    flex-direction: row;
+    flex-direction: column;
+    align-items: center;
   }
 }
 @media screen and (min-width: 992px) {
