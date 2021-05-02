@@ -22,7 +22,7 @@
 <script>
 var ctx = document.getElementById('myChart').getContext('2d');
 var myChart = new Chart(ctx, {
-    type: 'bar',
+    type: 'polarArea',
     data: {
         labels: ['Bitcoin', 'Ethereum', 'Bnb', 'Usdt', 'Other'],
         datasets: [{
@@ -46,9 +46,10 @@ var myChart = new Chart(ctx, {
         }]
     },
     options: {
-        scales: {
-            y: {
-                beginAtZero: true
+        plugins: {
+            legend: {
+                display: false,
+                
             }
         }
     }

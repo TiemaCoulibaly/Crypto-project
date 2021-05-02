@@ -131,7 +131,6 @@ footer {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  border-style: dotted;
 }
 
 .wallet > h2 {
