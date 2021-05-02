@@ -3,26 +3,6 @@ import "./home.scss";
 const Home = () => {
 	return (
 		<div>
-			<header>
-				<nav>
-					<ul>
-						<li>
-							<a href="/">
-								<img
-									src="images/crystalcoin.png"
-									alt="cristal-logo"
-								/>
-							</a>
-						</li>
-						<li className="list-item">
-							<a href="/">Log In</a>
-						</li>
-						<li className="list-item">
-							<a href="/">Register</a>
-						</li>
-					</ul>
-				</nav>
-			</header>
 			<main>
 				<article>
 					<figure>

@@ -5,11 +5,6 @@ const Currency = () => {
 	return (
 		<>
 			<header>
-				<img
-					className="crystal-logo"
-					src="images/crystalcoin.png"
-					alt=""
-				/>
 				<h1 className="currency__title">
 					<a href="/index.html">Crystal</a>
 				</h1>

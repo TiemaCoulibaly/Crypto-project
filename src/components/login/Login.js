@@ -4,11 +4,6 @@ import "../login/login.scss";
 const Login = () => {
 	return (
 		<>
-			<header>
-				<a href="/">
-					<img src="images/crystalcoin.png" alt="cristal-logo" />
-				</a>
-			</header>
 			<div id="container">
 				{/* zone de connexion */}
 
