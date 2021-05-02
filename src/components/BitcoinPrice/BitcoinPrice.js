@@ -6,18 +6,19 @@ const BitcoinPrice = () => {
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
-  /* Fetch Data ID with axios + async/await */
+  /* Fetch Data with axios + async/await */
   useEffect(() => {
     const fetchData = async () => {
       const response = await axios.get(
         `https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd&include_market_cap=true&include_24hr_vol=true&include_24hr_change=true&include_last_updated_at=true`
       );
-
+      console.log("Une seule requete");
       setData(response.data);
       setIsLoading(false);
     };
     fetchData();
-  });
+    // le [] empeche la requete de boucler à l'infini
+  }, []);
 
   /*Check isLoading */
   return isLoading ? (
