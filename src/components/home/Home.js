@@ -1,6 +1,38 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { Line } from "react-chartjs-2";
 import "./home.scss";
 const Home = () => {
+	const [chartData, setChartData] = useState({});
+	const chart = () => {
+		setChartData({
+			labels: ["Bitcoin", "Ethereum", "Bnb", "Usdt", "Other"],
+			datasets: [
+				{
+					label: "Le cours des cryptomonnaies",
+					data: [19, 12, 5, 3, 2],
+					backgroundColor: [
+						"rgba(75, 192, 192, 0.2)",
+						"rgba(75, 192, 192, 0.2)",
+						"rgba(75, 192, 192, 0.2)",
+						"rgba(75, 192, 192, 0.2)",
+						"rgba(75, 192, 192, 0.2)",
+					],
+					borderColor: [
+						"rgba(75, 192, 192, 1)",
+						"rgba(75, 192, 192, 1)",
+						"rgba(75, 192, 192, 1)",
+						"rgba(75, 192, 192, 1)",
+						"rgba(75, 192, 192, 1)",
+					],
+					borderWidth: 1,
+				},
+			],
+		});
+	};
+
+	useEffect(() => {
+		chart();
+	}, []);
 	return (
 		<div>
 			<main>
@@ -11,7 +43,12 @@ const Home = () => {
 						<div
 							class="chart"
 							style={{ width: "100%", height: "22vh" }}>
-							<canvas id="myChart"></canvas>
+							<Line
+								data={chartData}
+								options={{
+									responsive: true,
+								}}
+							/>
 						</div>
 						<figcaption>+5,4%</figcaption>
 					</figure>
@@ -21,7 +58,12 @@ const Home = () => {
 						<div
 							class="chart"
 							style={{ width: "100%", height: "22vh" }}>
-							<canvas id="myChart-1"></canvas>
+							<Line
+								data={chartData}
+								options={{
+									responsive: true,
+								}}
+							/>
 						</div>
 						<figcaption>+3,1%</figcaption>
 					</figure>
@@ -31,7 +73,12 @@ const Home = () => {
 						<div
 							class="chart"
 							style={{ width: "100%", height: "22vh" }}>
-							<canvas id="myChart-2"></canvas>
+							<Line
+								data={chartData}
+								options={{
+									responsive: true,
+								}}
+							/>
 						</div>
 						<figcaption>-1,2%</figcaption>
 					</figure>
