@@ -1,3 +1,13 @@
+@import "../main.scss";
+
+.currency__title {
+    color : $special-color;
+}
+
+.menu__list--title {
+	list-style-type: none;
+}
+
 .currency__name--logo {
   width: 10%;
 }

@@ -1,42 +1,8 @@
+@import "../main.scss";
 * {
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
-}
-header nav {
-	ul {
-		display: flex;
-		justify-content: space-evenly;
-		align-items: center;
-	}
-	li {
-		list-style: none;
-	}
-	.list-item {
-		@include border-grey();
-		padding: 10px;
-		border-radius: 10px;
-		background-color: $background-color-light;
-		&:hover {
-			box-shadow: 2px 2px 2px $special-color;
-		}
-		@media screen and (max-width: 576px) {
-			&:hover {
-				box-shadow: 2px 2px 2px $special-color;
-			}
-			margin: auto;
-		}
-	}
-	a {
-		text-decoration: none;
-		color: white;
-	}
-
-	img {
-		height: 200px;
-		width: 200px;
-		// margin-right: 350px;
-	}
 }
 
 main > article {
