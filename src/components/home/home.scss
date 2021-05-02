@@ -1,3 +1,4 @@
+@import "../main.scss";
 * {
 	padding: 0;
 	margin: 0;
@@ -13,7 +14,7 @@ header nav {
 		list-style: none;
 	}
 	.list-item {
-		@include border-grey();
+		// @include border-grey();
 		padding: 10px;
 		border-radius: 10px;
 		background-color: $background-color-light;
