@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Bar } from "react-chartjs-2";
 import BitcoinPrice from "../BitcoinPrice/BitcoinPrice";
+import WalletData from "../WalletData/WalletData";
 
 import "./portfolio.scss";
 
@@ -42,6 +43,8 @@ const Portfolio = () => {
       <div class="wallet">
         <h3>
           <BitcoinPrice />
+          <br />
+          <WalletData />
         </h3>
         <p>
           <button>1D</button>
