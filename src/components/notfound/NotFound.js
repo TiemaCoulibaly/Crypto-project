@@ -1,12 +1,13 @@
-import React from 'react'
+import React from "react";
+import './notfound.scss';
 
 const NotFound = () => {
-  return (
-		<div>
+	return (
+		<div className="container">
 			<h1>Cette page n'existe pas</h1>
-			<p>Elle a peut etre été supprimé</p>
+		
 		</div>
-  );
-}
+	);
+};
 
-export default NotFound
+export default NotFound;
