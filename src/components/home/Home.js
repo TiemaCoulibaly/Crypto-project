@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Line } from "react-chartjs-2";
+
 import "./home.scss";
 const Home = () => {
 	const [chartData, setChartData] = useState({});
@@ -41,7 +42,7 @@ const Home = () => {
 						<h2>Bitcoin</h2>
 						<h3>40 000€</h3>
 						<div
-							class="chart"
+							className="chart"
 							style={{ width: "100%", height: "22vh" }}>
 							<Line
 								data={chartData}
@@ -56,7 +57,7 @@ const Home = () => {
 						<h2>Ethereum</h2>
 						<h3>20 000€</h3>
 						<div
-							class="chart"
+							className="chart"
 							style={{ width: "100%", height: "22vh" }}>
 							<Line
 								data={chartData}
@@ -71,7 +72,7 @@ const Home = () => {
 						<h2>Dogecoin</h2>
 						<h3>240 000€</h3>
 						<div
-							class="chart"
+							className="chart"
 							style={{ width: "100%", height: "22vh" }}>
 							<Line
 								data={chartData}
@@ -84,7 +85,7 @@ const Home = () => {
 					</figure>
 				</article>
 
-				<div class="details">
+				<div className="details">
 					<h2>Pourquoi investir dans la crypto ?</h2>
 					<p>
 						Lorem ipsum, dolor sit amet consectetur adipisicing
@@ -99,9 +100,6 @@ const Home = () => {
 					</p>
 				</div>
 			</main>
-			<footer>
-				&copy; <span>Crystal</span>. All rights reserved
-			</footer>
 		</div>
 	);
 };
