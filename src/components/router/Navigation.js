@@ -5,7 +5,6 @@ import { useGoogleAuth } from "../context/googleAuth";
 import "../router/navigation.scss";
 
 const Navigation = () => {
-	//const [isSignIn, setSignIn] = useState(false);
 	const { isSignedIn, googleUser } = useGoogleAuth();
 	return (
 		<header>

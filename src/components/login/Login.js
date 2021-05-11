@@ -4,14 +4,6 @@ import "../login/login.scss";
 import LoginButton from "../buttons/LoginButton";
 
 const Login = () => {
-	//	const { user, setUser } = useContext(UserContext);
-
-	//const responseGoogle = (response) => {
-	//response.profileObj.name;
-	//const data = response.profileObj.name;
-	//console.log(response);
-	//};
-
 	return (
 		<>
 			<div id="container">
