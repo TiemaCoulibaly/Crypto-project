@@ -20,18 +20,10 @@ const BitcoinPrice = () => {
     // le [] empeche la requete de boucler à l'infini
   }, []);
 
+  let chargement = "chargement...";
+
   /*Check isLoading */
-  return isLoading ? (
-    <div>Chargement...</div>
-  ) : (
-    <div>
-      Btc : {data.bitcoin.usd} USD <br />
-      Eth : {data.ethereum.usd} USD <br />
-      Bnb : {data.binancecoin.usd} USD <br />
-      Ltc : {data.litecoin.usd} USD <br />
-      Tether : {data.tether.usd} USD <br />
-    </div>
-  );
+  return isLoading ? chargement : data.bitcoin.usd;
 };
 
 export default BitcoinPrice;

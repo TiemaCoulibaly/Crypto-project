@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
-const DollarWallet = (props) => {
+const WalletData = () => {
   /* States */
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -20,23 +20,10 @@ const DollarWallet = (props) => {
     // le [] empeche la requete de boucler à l'infini
   }, []);
 
+  let chargement = "chargement...";
+
   /*Check isLoading */
-  return isLoading ? (
-    <div>Chargement...</div>
-  ) : (
-    <div>
-      {data[0].first_name}'s Wallet
-      <br />
-      Btc : {data[0].wallet.bitcoin} <br />
-      Eth :{data[0].wallet.ethereum}
-      <br />
-      Bnb : {data[0].wallet.binance_coin} <br />
-      Ltc : {data[0].wallet.litecoin}
-      <br />
-      Usdt :{data[0].wallet.tether}
-      <br />
-    </div>
-  );
+  return isLoading ? chargement : data[0].wallet.bitcoin;
 };
 
-export default DollarWallet;
+export default WalletData;

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Bar } from "react-chartjs-2";
-import BitcoinPrice from "../BitcoinPrice/BitcoinPrice";
-import WalletData from "../WalletData/WalletData";
+import UseBtcUsd from "../hooks/useBtcUsd";
+import UseWalletData from "../hooks/useWalletData";
 
 import "./portfolio.scss";
 
@@ -38,32 +38,34 @@ const Portfolio = () => {
     chart();
   }, []);
 
+  const btcUsd = <UseBtcUsd />;
+  console.log(btcUsd);
+
   return (
-    <>
-      <div class="wallet">
-        <h3>
-          <BitcoinPrice />
-          <br />
-          <WalletData />
-        </h3>
-        <p>
-          <button>1D</button>
-          <button>1M</button>
-          <button>ALL</button>
-        </p>
-        <h2> My Wallet</h2>
-        <p class="evolution"> +1,27% </p>
-        <div class="graphWallet">
-          <Bar
-            data={chartData}
-            options={{
-              responsive: true,
-            }}
-          />
-        </div>
-        <p class="balance">22,530$ </p>
+    <div class="wallet">
+      <h3>
+        <UseWalletData /> btc
+        <br />
+      </h3>
+      <p>
+        <button>1D</button>
+        <button>1M</button>
+        <button>ALL</button>
+      </p>
+      <h2> My Wallet</h2>
+      <p class="evolution"> +1,27% </p>
+      <div class="graphWallet">
+        <Bar
+          data={chartData}
+          options={{
+            responsive: true,
+          }}
+        />
       </div>
-    </>
+      <p class="balance">
+        <UseBtcUsd /> USD{" "}
+      </p>
+    </div>
   );
 };
 
