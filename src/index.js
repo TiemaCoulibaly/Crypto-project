@@ -1,13 +1,14 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from "react";
+import ReactDOM from "react-dom";
 
-import App from './App';
-
+import App from "./App";
+import { GoogleAuthProvider } from "./components/context/googleAuth";
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+	<React.StrictMode>
+		<GoogleAuthProvider>
+			<App />
+		</GoogleAuthProvider>
+	</React.StrictMode>,
+	document.getElementById("root")
 );
-

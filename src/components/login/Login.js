@@ -1,12 +1,12 @@
 import React from "react";
 import "../login/login.scss";
 
+import LoginButton from "../buttons/LoginButton";
+
 const Login = () => {
 	return (
 		<>
 			<div id="container">
-				{/* zone de connexion */}
-
 				<form>
 					<h1>Connexion</h1>
 
@@ -17,7 +17,6 @@ const Login = () => {
 						type="text"
 						placeholder="Entrer le nom d'utilisateur"
 						name="username"
-						required
 					/>
 
 					<label>
@@ -27,14 +26,9 @@ const Login = () => {
 						type="password"
 						placeholder="Entrer le mot de passe"
 						name="password"
-						required
 					/>
-
-					{/* input type="submit" src="http://127.0.0.1:5501/portfolio.html" id='submit' value='LOGIN' */}
-					<button class="connexion">
-						<a href="http://127.0.0.1:5501/portfolio.html">LOGIN</a>
-					</button>
 				</form>
+				<LoginButton />
 			</div>
 		</>
 	);
