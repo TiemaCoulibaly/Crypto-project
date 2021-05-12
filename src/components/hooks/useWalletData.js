@@ -3,7 +3,7 @@ import axios from "axios";
 
 const WalletData = () => {
   /* States */
-  const [data, setData] = useState([]);
+  const [dataW, setDataW] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
   /* Fetch Data with axios + async/await */
@@ -13,7 +13,7 @@ const WalletData = () => {
         `https://firebasestorage.googleapis.com/v0/b/crystal-users.appspot.com/o/random_user.json?alt=media&token=57dd2dd3-0e19-448c-b10e-6584493d73ba`
       );
       console.log(response.data);
-      setData(response.data);
+      setDataW(response.data);
       setIsLoading(false);
     };
     fetchData();
@@ -23,7 +23,7 @@ const WalletData = () => {
   let chargement = "chargement...";
 
   /*Check isLoading */
-  return isLoading ? chargement : data[0].wallet.bitcoin;
+  return isLoading ? chargement : dataW[0].wallet.bitcoin;
 };
 
 export default WalletData;

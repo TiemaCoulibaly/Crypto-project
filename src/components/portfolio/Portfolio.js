@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from "react";
-import { Bar } from "react-chartjs-2";
-import useBtcUsd from "../hooks/useBtcUsd";
+import UseBtcUsd from "../hooks/useBtcUsd";
+import UseWalletData from "../hooks/useWalletData";
 
 import "./portfolio.scss";
 
 const Portfolio = () => {
-  const btcUsd = useBtcUsd();
-  console.log(btcUsd);
+  const btcUsd = UseBtcUsd();
+  const WalletBtc = UseWalletData();
+  const WalletUsd = btcUsd * WalletBtc;
+  console.log(WalletUsd);
 
   return (
     <div class="wallet">
@@ -18,10 +20,10 @@ const Portfolio = () => {
         <button>1M</button>
         <button>ALL</button>
       </p>
-      <h2> My Wallet</h2>
-      <p class="balance">
-        <useBtcUsd /> USD{" "}
-      </p>
+      <h2> My BTC Wallet</h2>
+      <p class="balance">Total : {WalletBtc} btc </p>
+      <p>Au taux actuel de {btcUsd} dollars par BTC cela fait un total de : </p>
+      <p class="balance">{WalletUsd} USD </p>
     </div>
   );
 };
