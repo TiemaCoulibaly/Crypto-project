@@ -1,18 +1,18 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
-const BitcoinPrice = () => {
+const useCryptoPrice = (walletBtc) => {
   /* States */
-  const [data, setData] = useState([]);
+  const [data, setData] = useState({});
   const [isLoading, setIsLoading] = useState(true);
 
   /* Fetch Data with axios + async/await */
   useEffect(() => {
     const fetchData = async () => {
       const response = await axios.get(
-        `https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd&include_market_cap=true&include_24hr_vol=true&include_24hr_change=true&include_last_updated_at=true`
+        `https://api.coingecko.com/api/v3/simple/price?ids=bitcoin%2Cethereum%2Clitecoin%2Cbinancecoin%2Ctether&vs_currencies=usd`
       );
-      console.log("Une seule requete");
+      console.log("Hello UseCryptoPrice");
       setData(response.data);
       setIsLoading(false);
     };
@@ -20,14 +20,10 @@ const BitcoinPrice = () => {
     // le [] empeche la requete de boucler à l'infini
   }, []);
 
+  let chargement = "chargement Price...";
+
   /*Check isLoading */
-  return isLoading ? (
-    <div>Chargement...</div>
-  ) : (
-    <div>
-      <h3>Bitcoin price : {data.bitcoin.usd}$</h3>
-    </div>
-  );
+  return isLoading ? chargement : data.bitcoin.usd * walletBtc;
 };
 
-export default BitcoinPrice;
+export default useCryptoPrice;

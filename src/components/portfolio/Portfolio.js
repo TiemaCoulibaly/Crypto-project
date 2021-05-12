@@ -1,66 +1,36 @@
 import React, { useState, useEffect } from "react";
-import { Bar } from "react-chartjs-2";
-import BitcoinPrice from "../BitcoinPrice/BitcoinPrice";
+import UseCryptoPrice from "../hooks/useCryptoPrice";
+import UseWalletData from "../hooks/useWalletData";
 
 import "./portfolio.scss";
 
 const Portfolio = () => {
-  const [chartData, setChartData] = useState({});
-  const chart = () => {
-    setChartData({
-      labels: ["Bitcoin", "Ethereum", "Bnb", "Usdt", "Other"],
-      datasets: [
-        {
-          label: "Le cours des cryptomonnaies",
-          data: [19, 12, 5, 3, 2],
-          backgroundColor: [
-            "rgba(75, 192, 192, 0.2)",
-            "rgba(75, 192, 192, 0.2)",
-            "rgba(75, 192, 192, 0.2)",
-            "rgba(75, 192, 192, 0.2)",
-            "rgba(75, 192, 192, 0.2)",
-          ],
-          borderColor: [
-            "rgba(75, 192, 192, 1)",
-            "rgba(75, 192, 192, 1)",
-            "rgba(75, 192, 192, 1)",
-            "rgba(75, 192, 192, 1)",
-            "rgba(75, 192, 192, 1)",
-          ],
-          borderWidth: 1,
-        },
-      ],
-    });
-  };
+  const btc = UseWalletData();
+  console.log(btc);
+  //console.log(btc[0].wallet.bitcoin);
 
-  useEffect(() => {
-    chart();
-  }, []);
+  const btcUsd = UseCryptoPrice(btc);
+  console.log(btcUsd);
+  // console.log(btcUsd.bitcoin.usd);
+
+  //  const WalletBtcUsd = btc[0].wallet.bitcoin * btcUsd.bitcoin.usd;
+  // console.log(WalletBtcUsd);
 
   return (
-    <>
-      <div class="wallet">
-        <h3>
-          <BitcoinPrice />
-        </h3>
-        <p>
-          <button>1D</button>
-          <button>1M</button>
-          <button>ALL</button>
-        </p>
-        <h2> My Wallet</h2>
-        <p class="evolution"> +1,27% </p>
-        <div class="graphWallet">
-          <Bar
-            data={chartData}
-            options={{
-              responsive: true,
-            }}
-          />
-        </div>
-        <p class="balance">22,530$ </p>
-      </div>
-    </>
+    <div class="wallet">
+      <h3>
+        <br />
+      </h3>
+      <p>
+        <button>1D</button>
+        <button>1M</button>
+        <button>ALL</button>
+      </p>
+      <h2> bitcoin Wallet</h2>
+      <p class="balance">Total : {btc} btc </p>
+      <p>Au taux actuel de dollars par BTC cela fait un total de : </p>
+      <p class="balance">{btcUsd} USD </p>
+    </div>
   );
 };
 
