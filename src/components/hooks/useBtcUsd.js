@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
-const BitcoinPrice = () => {
+const useBtcUsd = () => {
   /* States */
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -26,4 +26,4 @@ const BitcoinPrice = () => {
   return isLoading ? chargement : data.bitcoin.usd;
 };
 
-export default BitcoinPrice;
+export default useBtcUsd;
