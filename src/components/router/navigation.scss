@@ -9,7 +9,7 @@ header nav {
 		list-style: none;
 	}
 	.list-item {
-		 @include border-grey();
+		@include border-grey();
 		padding: 10px;
 		border-radius: 10px;
 		background-color: $background-color-light;
@@ -25,12 +25,15 @@ header nav {
 	}
 	a {
 		text-decoration: none;
-		color: white;
+		color: $primary-color;
 	}
 
 	img {
 		height: 200px;
 		width: 200px;
 		// margin-right: 350px;
+	}
+	p {
+		color: $primary-color;
 	}
 }
