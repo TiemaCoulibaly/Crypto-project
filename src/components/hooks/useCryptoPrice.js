@@ -18,19 +18,32 @@ const useCryptoPrice = (wallet) => {
       console.log("Hello UseCryptoPrice");
       setWalletUsd({
         tether: {
+          amount: wallet.tether || 0,
           usd: (wallet.tether || 0) * response.data.tether.usd,
         },
         binancecoin: {
+          amount: wallet.binance_coin || 0,
           usd: (wallet.binance_coin || 0) * response.data.binancecoin.usd,
         },
         ethereum: {
+          amount: wallet.ethereum || 0,
           usd: (wallet.ethereum || 0) * response.data.ethereum.usd,
         },
         litecoin: {
+          amount: wallet.litecoin || 0,
           usd: (wallet.litecoin || 0) * response.data.litecoin.usd,
         },
         bitcoin: {
+          amount: wallet.bitcoin || 0,
           usd: (wallet.bitcoin || 0) * response.data.bitcoin.usd,
+        },
+        total: {
+          usd:
+            (wallet.tether || 0) * response.data.tether.usd +
+            (wallet.binance_coin || 0) * response.data.binancecoin.usd +
+            (wallet.ethereum || 0) * response.data.ethereum.usd +
+            (wallet.litecoin || 0) * response.data.litecoin.usd +
+            (wallet.bitcoin || 0) * response.data.bitcoin.usd,
         },
       });
       setIsLoading(false);

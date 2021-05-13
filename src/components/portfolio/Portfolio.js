@@ -22,14 +22,26 @@ const Portfolio = () => {
         <button>1M</button>
         <button>ALL</button>
       </p>
-      <h2> bitcoin Wallet</h2>
-      <p class="balance">Total : {walletUsd.bitcoin.usd} </p>
-      <p class="balance">Total : {walletUsd.litecoin.usd} </p>
-      <p class="balance">Total : {walletUsd.binancecoin.usd} </p>
-      <p class="balance">Total : {walletUsd.ethereum.usd} </p>
-      <p class="balance">Total : {walletUsd.tether.usd} </p>
-      <p>Au taux actuel de dollars par BTC cela fait un total de : </p>
-      <p class="balance"> USD </p>
+      <h2> Wallet 0 </h2>
+      <p class="balance">
+        {walletUsd.bitcoin.amount} btc = {walletUsd.bitcoin.usd.toFixed(2)} $
+      </p>
+      <p class="balance">
+        {walletUsd.ethereum.amount} eth = {walletUsd.ethereum.usd.toFixed(2)} $
+      </p>
+      <p class="balance">
+        {walletUsd.binancecoin.amount} bnb ={" "}
+        {walletUsd.binancecoin.usd.toFixed(2)} $
+      </p>
+      <p class="balance">
+        {walletUsd.litecoin.amount} ltc = {walletUsd.litecoin.usd.toFixed(2)} $
+      </p>
+      <p class="balance">
+        {" "}
+        {walletUsd.tether.amount} usdt = {walletUsd.tether.usd.toFixed(2)} $
+      </p>
+      <br />
+      <p class="balance">Total: {walletUsd.total.usd.toFixed(2)} USD </p>
     </div>
   );
 };
