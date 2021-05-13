@@ -1,10 +1,14 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import { useGoogleAuth } from "../context/googleAuth";
 
 const useWalletData = () => {
   /* States */
-  const [data, setData] = useState({});
+  const [data, setData] = useState();
   const [isLoading, setIsLoading] = useState(true);
+
+  // const { isSignedIn, googleUser } = useGoogleAuth();
+  // console.log(googleUser);
 
   /* Fetch Data with axios + async/await */
   useEffect(() => {
@@ -14,16 +18,15 @@ const useWalletData = () => {
       );
       console.log("Hello UseWalletData");
       setData(response.data);
+      console.log(response.data);
       setIsLoading(false);
     };
     fetchData();
     // le [] empeche la requete de boucler à l'infini
   }, []);
 
-  let chargement = "chargement Wallet...";
-
   /*Check isLoading */
-  return isLoading ? chargement : data[1].wallet.bitcoin;
+  return { isLoading, data };
 };
 
 export default useWalletData;
