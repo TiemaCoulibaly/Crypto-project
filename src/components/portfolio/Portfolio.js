@@ -1,66 +1,48 @@
 import React, { useState, useEffect } from "react";
-import { Bar } from "react-chartjs-2";
-import BitcoinPrice from "../BitcoinPrice/BitcoinPrice";
+import useCryptoPrice from "../hooks/useCryptoPrice";
+import useWalletData from "../hooks/useWalletData";
 
 import "./portfolio.scss";
 
 const Portfolio = () => {
-  const [chartData, setChartData] = useState({});
-  const chart = () => {
-    setChartData({
-      labels: ["Bitcoin", "Ethereum", "Bnb", "Usdt", "Other"],
-      datasets: [
-        {
-          label: "Le cours des cryptomonnaies",
-          data: [19, 12, 5, 3, 2],
-          backgroundColor: [
-            "rgba(75, 192, 192, 0.2)",
-            "rgba(75, 192, 192, 0.2)",
-            "rgba(75, 192, 192, 0.2)",
-            "rgba(75, 192, 192, 0.2)",
-            "rgba(75, 192, 192, 0.2)",
-          ],
-          borderColor: [
-            "rgba(75, 192, 192, 1)",
-            "rgba(75, 192, 192, 1)",
-            "rgba(75, 192, 192, 1)",
-            "rgba(75, 192, 192, 1)",
-            "rgba(75, 192, 192, 1)",
-          ],
-          borderWidth: 1,
-        },
-      ],
-    });
-  };
+  const { data } = useWalletData();
 
-  useEffect(() => {
-    chart();
-  }, []);
+  const { walletUsd, isLoading } = useCryptoPrice(data ? data[0].wallet : null);
+  console.log(walletUsd, isLoading);
 
-  return (
-    <>
-      <div class="wallet">
-        <h3>
-          <BitcoinPrice />
-        </h3>
-        <p>
-          <button>1D</button>
-          <button>1M</button>
-          <button>ALL</button>
-        </p>
-        <h2> My Wallet</h2>
-        <p class="evolution"> +1,27% </p>
-        <div class="graphWallet">
-          <Bar
-            data={chartData}
-            options={{
-              responsive: true,
-            }}
-          />
-        </div>
-        <p class="balance">22,530$ </p>
-      </div>
-    </>
+  return isLoading ? (
+    "chargement"
+  ) : (
+    <div class="wallet">
+      <h3>
+        <br />
+      </h3>
+      <p>
+        <button>1D</button>
+        <button>1M</button>
+        <button>ALL</button>
+      </p>
+      <h2> Wallet 0 </h2>
+      <p class="balance">
+        {walletUsd.bitcoin.amount} btc = {walletUsd.bitcoin.usd.toFixed(2)} $
+      </p>
+      <p class="balance">
+        {walletUsd.ethereum.amount} eth = {walletUsd.ethereum.usd.toFixed(2)} $
+      </p>
+      <p class="balance">
+        {walletUsd.binancecoin.amount} bnb ={" "}
+        {walletUsd.binancecoin.usd.toFixed(2)} $
+      </p>
+      <p class="balance">
+        {walletUsd.litecoin.amount} ltc = {walletUsd.litecoin.usd.toFixed(2)} $
+      </p>
+      <p class="balance">
+        {" "}
+        {walletUsd.tether.amount} usdt = {walletUsd.tether.usd.toFixed(2)} $
+      </p>
+      <br />
+      <p class="balance">Total: {walletUsd.total.usd.toFixed(2)} USD </p>
+    </div>
   );
 };
 
