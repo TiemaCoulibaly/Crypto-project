@@ -1,4 +1,4 @@
-import React, { createContext } from "react";
+import React, { createContext, useContext } from "react";
 import { useGoogleLogin } from "react-use-googlelogin";
 
 const GoogleAuthContext = createContext();
@@ -16,4 +16,4 @@ export const GoogleAuthProvider = ({ children }) => {
 	);
 };
 
-export const useGoogleAuth = () => React.useContext(GoogleAuthContext);
+export const useGoogleAuth = () => useContext(GoogleAuthContext);
