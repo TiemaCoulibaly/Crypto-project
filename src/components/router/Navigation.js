@@ -6,6 +6,7 @@ import "../router/navigation.scss";
 
 const Navigation = () => {
 	const { isSignedIn, googleUser } = useGoogleAuth();
+
 	return (
 		<header>
 			<nav>
