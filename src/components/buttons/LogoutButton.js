@@ -20,7 +20,7 @@ const LogoutButton = () => {
 				<div className="btn-logout">
 					<GoogleLoginButton
 						text="LogOut"
-						size="30px"
+						size="36px"
 						onClick={signOut}
 					/>
 				</div>
