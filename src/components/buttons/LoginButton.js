@@ -1,29 +1,21 @@
 import React from "react";
+import {
+	GoogleLoginButton,
+	FacebookLoginButton,
+} from "react-social-login-buttons";
 import { useGoogleAuth } from "../context/googleAuth";
-import "./loginButton.scss";
+import useFacebook from "react-easy-facebook";
 
 const LoginButton = () => {
 	const { signIn } = useGoogleAuth();
+	const { login } = useFacebook({
+		appId: "762468841120222",
+	});
 
 	return (
 		<>
-			{/* <button className="google-icon-wrapper" onClick={signIn}>
-				<img
-					className="google-icon"
-					src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"
-					alt="googleicon"
-				/>
-				Sign in
-			</button> */}
-			<div className="google-icon-wrapper">
-				<input
-					onClick={signIn}
-					className="google-icon"
-					type="image"
-					src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"
-					alt="google-signin"
-				/>
-			</div>
+			<GoogleLoginButton onClick={signIn} />
+			<FacebookLoginButton onClick={login} />
 		</>
 	);
 };
