@@ -15,7 +15,7 @@ const Routes = () => {
 			<PublicRouter exact path="/" component={Home} />
 			<PrivateRouter path="/home" component={Home} />
 			<PrivateRouter path="/portfolio" component={Portfolio} />
-			<PrivateRouter path="/currency" component={Currency} />
+			<PublicRouter path="/currency" component={Currency} />
 			<PublicRouter exact path="/login" component={Login} />
 
 			<PublicRouter exact path="*" component={NotFound} />
