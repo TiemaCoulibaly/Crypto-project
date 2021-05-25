@@ -12,15 +12,15 @@ L'application sera pensée mobile-first mais sera responsive.
 
 ### Définition des objectifs
 
-- Proposer une interface soignée et épurée, avec une lecture facile des données pour l'utilisateur
-- Mettre en place un système d'authentification avec création et gestion de compte, ainsi que la sécurité.
-- Récupérer les données suivantes :
+-   Proposer une interface soignée et épurée, avec une lecture facile des données pour l'utilisateur
+-   Mettre en place un système d'authentification avec création et gestion de compte, ainsi que la sécurité.
+-   Récupérer les données suivantes :
 
-  - Les différents cours via API https://coinmarketcap.com/ https://www.luno.com/en/developers
-  - Les graphiques via ChartJS
+    -   Les différents cours via API https://coinmarketcap.com/ https://www.luno.com/en/developers
+    -   Les graphiques via ChartJS
 
-- (Optionnel) Effectuer des transactions via blockchain
-- (Optionnel) Système de chat
+-   (Optionnel) Effectuer des transactions via blockchain
+-   (Optionnel) Système de chat
 
 ### Décrire le public visé
 
@@ -28,7 +28,8 @@ Les utilisateurs, mobiles ou non, intéressés par les cryptomonnaies.
 
 ### Commandes
 
-- SASS :
+-   SASS :
+
 ```sh
 sass src/main.scss public/css/styles.css
 ```
@@ -37,10 +38,9 @@ sass src/main.scss public/css/styles.css
 sass src/main.scss public/css/styles.css --watch
 ```
 
-- Git :
-  git remote add upstream https://github.com/Mehdi-Adel/Crypto-project.git
-  git pull upstream main
-
+-   Git :
+    git remote add upstream https://github.com/Mehdi-Adel/Crypto-project.git
+    git pull upstream main
 
 # Getting Started with Create React App
 
@@ -73,3 +73,6 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
+### Gmail Authentication
+
+https://github.com/asyarb/react-use-googlelogin
