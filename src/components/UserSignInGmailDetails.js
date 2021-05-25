@@ -1,6 +1,6 @@
 import React from "react";
 import { useGoogleAuth } from "./context/googleAuth";
-
+//Ce fichier représente les données que l'on peut recupéré de l'utilisateur lorqu'il est authentifié avec gmail
 const UserDetails = () => {
 	const { googleUser } = useGoogleAuth();
 	return (
