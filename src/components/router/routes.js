@@ -1,5 +1,5 @@
 import React from "react";
-import { Switch } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 import Home from "../home/Home";
 import Login from "../login/Login";
 import Portfolio from "../portfolio/Portfolio";
@@ -15,7 +15,7 @@ const Routes = () => {
 			<PublicRouter exact path="/" component={Home} />
 			<PrivateRouter path="/home" component={Home} />
 			<PrivateRouter path="/portfolio" component={Portfolio} />
-			<PublicRouter path="/currency" component={Currency} />
+			<Route path="/currency" component={Currency} />
 			<PublicRouter exact path="/login" component={Login} />
 
 			<PublicRouter exact path="*" component={NotFound} />
