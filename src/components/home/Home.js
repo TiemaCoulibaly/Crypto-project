@@ -87,6 +87,7 @@ const Home = () => {
 
 				<div className="details">
 					<h2>Pourquoi investir dans la crypto ?</h2>
+
 					<p>
 						Lorem ipsum, dolor sit amet consectetur adipisicing
 						elit. Deleniti minima labore expedita quas. Vitae, unde

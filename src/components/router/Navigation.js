@@ -22,15 +22,16 @@ const Navigation = () => {
 					<li className="list-item">
 						<NavLink to="/">Home</NavLink>
 					</li>
+          <li className="list-item">
+						<NavLink to="/currency">Currency</NavLink>
+					</li>
 					{isSignedIn ? (
 						<>
-							<p>Bonjour, {googleUser.profileObj.name}</p>
+							
 							<li className="list-item">
 								<NavLink to="/portfolio">Portfolio</NavLink>
 							</li>
-							<li className="list-item">
-								<NavLink to="/currency">Currency</NavLink>
-							</li>
+							<p>Bonjour, {googleUser.profileObj.name}</p>
 							<LogoutButton />
 						</>
 					) : (
