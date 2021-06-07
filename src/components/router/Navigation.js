@@ -27,10 +27,11 @@ const Navigation = () => {
 					</li>
 					{isSignedIn ? (
 						<>
-							<p>Bonjour, {googleUser.profileObj.name}</p>
+							
 							<li className="list-item">
 								<NavLink to="/portfolio">Portfolio</NavLink>
 							</li>
+							<p>Bonjour, {googleUser.profileObj.name}</p>
 							<LogoutButton />
 						</>
 					) : (

@@ -1,9 +1,9 @@
 @import "../main.scss";
-* {
-	padding: 0;
-	margin: 0;
-	box-sizing: border-box;
-}
+// * {
+// 	// padding: 0;
+// 	// margin: 0;
+// 	box-sizing: border-box;
+// }
 
 .details {
 	@include border-grey();
@@ -30,9 +30,15 @@ footer {
 	margin-top: 50px;
 	color: $primary-color;
 }
-
-// @media (max-width: 576px) {
-// }
+// .chart{
+//  @media (max-width: 1050px) {
+	
+// 		display: block;
+// 		box-sizing: border-box;
+// 		height: 100%px;
+// 		width: 100%px;
+// 	}
+//  }
 
 // @media (min-width: 768px) {
 // }
