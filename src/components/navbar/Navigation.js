@@ -2,7 +2,7 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import LogoutButton from "../buttons/LogoutButton";
 import { useGoogleAuth } from "../context/googleAuth";
-import "../router/navigation.scss";
+import "./navigation.scss";
 
 const Navigation = () => {
 	const { isSignedIn, googleUser } = useGoogleAuth();
@@ -22,12 +22,11 @@ const Navigation = () => {
 					<li className="list-item">
 						<NavLink to="/">Home</NavLink>
 					</li>
-          <li className="list-item">
+					<li className="list-item">
 						<NavLink to="/currency">Currency</NavLink>
 					</li>
 					{isSignedIn ? (
 						<>
-							
 							<li className="list-item">
 								<NavLink to="/portfolio">Portfolio</NavLink>
 							</li>
