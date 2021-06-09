@@ -1,7 +1,6 @@
 import React from "react";
 import CryptoItem from "../cryptoCard/CryptoItem";
 import useCryptoCurrentValue from "../hooks/useCryptoCurrentValue";
-import { CryptoList } from "../helpers/CryptoList";
 
 import "./home.scss";
 const Home = () => {
