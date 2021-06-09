@@ -6,10 +6,10 @@ import "./portfolio.scss";
 
 const Portfolio = () => {
   const { data } = useWalletData();
-
   const { walletUsd, isLoading } = useCryptoPrice(data ? data[0].wallet : null);
-  const { Graph } = useGraphCurrency();
-  console.log(Graph.bitcoin.one);
+
+  // const { test } = useGraphCurrency();
+  // console.log(test);
 
   return isLoading ? (
     "chargement"

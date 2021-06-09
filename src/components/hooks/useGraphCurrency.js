@@ -22,7 +22,6 @@ const useGraphCurrency = (currency) => {
         },
       });
       setIsLoading(false);
-      console.log(response.data.prices[0]);
     };
     fetchData();
     // le [] empeche la requete de boucler à l'infini
