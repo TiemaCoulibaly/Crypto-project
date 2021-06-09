@@ -1,14 +1,50 @@
 import React from "react";
 import CryptoItem from "../cryptoCard/CryptoItem";
+import useCryptoCurrentValue from "../hooks/useCryptoCurrentValue";
 import { CryptoList } from "../helpers/CryptoList";
 
 import "./home.scss";
 const Home = () => {
-	return (
+	const { btcUsd, isLoading } = useCryptoCurrentValue();
+
+	//valeur 1 crypto => btcUsd.bitcoin.usd.bitcoin
+	//valeur des 5 crypto => btcUsd.bitcoin.usd
+
+	// console.log("============btcUsd========================");
+	// console.log(btcUsd.bitcoin.usd);
+
+	return isLoading ? (
+		"sa vient"
+	) : (
 		<div>
 			<main>
 				<article>
-					{CryptoList.map((crypto, key) => {
+					<CryptoItem
+						name="Bitcoin"
+						price={btcUsd.bitcoin.usd}
+						value="455"
+					/>
+					<CryptoItem
+						name="Ethereum"
+						price={btcUsd.ethereum.usd}
+						value="455"
+					/>
+					<CryptoItem
+						name="Litecoin"
+						price={btcUsd.litecoin.usd}
+						value="455"
+					/>
+					<CryptoItem
+						name="Binancecoin"
+						price={btcUsd.binancecoin.usd}
+						value="455"
+					/>
+					<CryptoItem
+						name="Tether"
+						price={btcUsd.tether.usd}
+						value="455"
+					/>
+					{/* {CryptoList.map((crypto, key) => {
 						return (
 							<CryptoItem
 								key={key}
@@ -17,7 +53,7 @@ const Home = () => {
 								value={crypto.value}
 							/>
 						);
-					})}
+					})} */}
 				</article>
 
 				<div className="details">
