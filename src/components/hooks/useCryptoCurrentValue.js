@@ -10,35 +10,13 @@ const useCryptoCurrentValue = () => {
 	useEffect(() => {
 		const fetchData = async () => {
 			const response = await axios.get(
-				`https://api.coingecko.com/api/v3/simple/price?ids=bitcoin%2Cethereum%2Clitecoin%2Cbinancecoin%2Ctether&vs_currencies=usd&include_24hr_change=true`
+				`https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=bitcoin%2Cethereum%2Clitecoin%2Cbinancecoin%2Ctether&order=market_cap_desc&per_page=100&page=1&sparkline=false&price_change_percentage=1d%2C%202d%2C%203d%2C%204d%2C%205d`
 			);
 			// console.log("====================================");
-			// console.log("use crypto value", response.data);
+			console.log("use crypto value", response.data);
 			// console.log("====================================");
-			// setBtcUsd(response.data);
-			setBtcUsd({
-				bitcoin: {
-					usd: response.data.bitcoin.usd,
-					variation: response.data.bitcoin.usd_24h_change,
-				},
-				ethereum: {
-					usd: response.data.ethereum.usd,
-					variation: response.data.ethereum.usd_24h_change,
-				},
+			setBtcUsd(response.data);
 
-				litecoin: {
-					usd: response.data.litecoin.usd,
-					variation: response.data.litecoin.usd_24h_change,
-				},
-				binancecoin: {
-					usd: response.data.binancecoin.usd,
-					variation: response.data.binancecoin.usd_24h_change,
-				},
-				tether: {
-					usd: response.data.tether.usd,
-					variation: response.data.tether.usd_24h_change,
-				},
-			});
 			setIsLoading(false);
 		};
 		fetchData();
