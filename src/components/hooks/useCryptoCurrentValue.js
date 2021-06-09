@@ -10,7 +10,7 @@ const useCryptoCurrentValue = () => {
 	useEffect(() => {
 		const fetchData = async () => {
 			const response = await axios.get(
-				`https://api.coingecko.com/api/v3/simple/price?ids=bitcoin%2Cethereum%2Clitecoin%2Cbinancecoin%2Ctether&vs_currencies=usd`
+				`https://api.coingecko.com/api/v3/simple/price?ids=bitcoin%2Cethereum%2Clitecoin%2Cbinancecoin%2Ctether&vs_currencies=usd&include_24hr_change=true`
 			);
 			// console.log("====================================");
 			// console.log("use crypto value", response.data);
@@ -19,19 +19,24 @@ const useCryptoCurrentValue = () => {
 			setBtcUsd({
 				bitcoin: {
 					usd: response.data.bitcoin.usd,
+					variation: response.data.bitcoin.usd_24h_change,
 				},
 				ethereum: {
 					usd: response.data.ethereum.usd,
+					variation: response.data.ethereum.usd_24h_change,
 				},
 
 				litecoin: {
 					usd: response.data.litecoin.usd,
+					variation: response.data.litecoin.usd_24h_change,
 				},
 				binancecoin: {
 					usd: response.data.binancecoin.usd,
+					variation: response.data.binancecoin.usd_24h_change,
 				},
 				tether: {
 					usd: response.data.tether.usd,
+					variation: response.data.tether.usd_24h_change,
 				},
 			});
 			setIsLoading(false);

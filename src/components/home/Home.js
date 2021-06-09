@@ -20,39 +20,29 @@ const Home = () => {
 				<article>
 					<CryptoItem
 						name="Bitcoin"
-						price={btcUsd.bitcoin.usd}
-						value="455"
+						price={btcUsd.bitcoin.usd.toFixed(2)}
+						value={btcUsd.bitcoin.variation.toFixed(2)}
 					/>
 					<CryptoItem
 						name="Ethereum"
-						price={btcUsd.ethereum.usd}
-						value="455"
+						price={btcUsd.ethereum.usd.toFixed(2)}
+						value={btcUsd.ethereum.variation.toFixed(2)}
 					/>
 					<CryptoItem
 						name="Litecoin"
-						price={btcUsd.litecoin.usd}
-						value="455"
+						price={btcUsd.litecoin.usd.toFixed(2)}
+						value={btcUsd.litecoin.variation.toFixed(2)}
 					/>
 					<CryptoItem
 						name="Binancecoin"
-						price={btcUsd.binancecoin.usd}
-						value="455"
+						price={btcUsd.binancecoin.usd.toFixed(2)}
+						value={btcUsd.binancecoin.variation.toFixed(2)}
 					/>
 					<CryptoItem
 						name="Tether"
-						price={btcUsd.tether.usd}
-						value="455"
+						price={btcUsd.tether.usd.toFixed(2)}
+						value={btcUsd.tether.variation.toFixed(2)}
 					/>
-					{/* {CryptoList.map((crypto, key) => {
-						return (
-							<CryptoItem
-								key={key}
-								name={crypto.name}
-								price={crypto.price}
-								value={crypto.value}
-							/>
-						);
-					})} */}
 				</article>
 
 				<div className="details">
