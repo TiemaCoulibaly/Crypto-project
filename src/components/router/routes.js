@@ -13,13 +13,14 @@ const Routes = () => {
 	return (
 		<Switch>
 			<PublicRouter exact path="/" component={Home} />
+			<PublicRouter exact path="/login" component={Login} />
 			<PrivateRouter path="/home" component={Home} />
 			<PrivateRouter path="/portfolio" component={Portfolio} />
 			<Route path="/currency" component={Currency} />
-			<PublicRouter exact path="/login" component={Login} />
 
 			<PublicRouter exact path="*" component={NotFound} />
 		</Switch>
+		
 	);
 };
 
