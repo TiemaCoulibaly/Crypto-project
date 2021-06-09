@@ -37,7 +37,7 @@ const CryptoItem = ({ name, price, value }) => {
 	return (
 		<figure>
 			<h2>{name}</h2>
-			<h3>{price}€</h3>
+			<h3>{price}$</h3>
 			<div className="chart" style={{ width: "100%", height: "22vh" }}>
 				<Line
 					data={chartData}
