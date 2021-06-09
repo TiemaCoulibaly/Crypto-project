@@ -20,7 +20,6 @@ const Routes = () => {
 
 			<PublicRouter exact path="*" component={NotFound} />
 		</Switch>
-		
 	);
 };
 
