@@ -12,7 +12,6 @@ const Home = () => {
 		<div>
 			<main>
 				<article>
-					<CryptoItem variation="0" />
 					{btcUsd.map((crypto, key) => {
 						return (
 							<CryptoItem
