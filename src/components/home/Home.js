@@ -6,14 +6,8 @@ import "./home.scss";
 const Home = () => {
 	const { btcUsd, isLoading } = useCryptoCurrentValue();
 
-	//valeur 1 crypto => btcUsd.bitcoin.usd.bitcoin
-	//valeur des 5 crypto => btcUsd.bitcoin.usd
-
-	// console.log("============btcUsd========================");
-	// console.log(btcUsd.bitcoin.usd);
-
 	return isLoading ? (
-		"sa vient"
+		"En cours de chargement ..."
 	) : (
 		<div>
 			<main>
