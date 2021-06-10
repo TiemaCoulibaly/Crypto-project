@@ -43,19 +43,16 @@ const CryptoItem = ({ name, price, variation, image, symbol }) => {
 	};
 	return (
 		<figure>
-			<h2>
-				{" "}
-				<img
-					src={image}
-					alt={symbol}
-					style={{
-						width: "25px",
-						height: "25px",
-						marginRight: "10px",
-					}}
-				/>
-				{name}
-			</h2>
+			<img
+				src={image}
+				alt={symbol}
+				style={{
+					width: "25px",
+					height: "25px",
+					marginRight: "10px",
+				}}
+			/>
+			<h2> {name}</h2>
 
 			<h3>{price}$</h3>
 			<div className="chart" style={{ width: "100%", height: "22vh" }}>
