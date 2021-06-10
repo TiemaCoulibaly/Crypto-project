@@ -17,7 +17,7 @@ const Navigation = () => {
 	console.log(showLinks);
 
 	return (
-		<header>
+		// <header>
 			<nav className={`navbar ${showLinks? "show-nav":"hide-nav"}`}>
 				{/* <ul>
 					<li> */}
@@ -64,7 +64,7 @@ const Navigation = () => {
 				
 
 			</nav>
-		</header>
+		// </header>
 	);
 };
 
