@@ -1,6 +1,6 @@
 @import "../main.scss";
-nav {
-	.navbar{
+.navbar {
+	
 		display: flex;
 		flex-wrap: wrap;
 		align-items: center;
@@ -11,13 +11,18 @@ nav {
 		padding: 1rem;
 		background-color: $background-color-light;
 		
-	}		
+	}
+
+	@media screen and (max-width: 767px) {
+	.show-nav .nav-ul{
+		width: 100vw;
+		right: 0;
+		visibility: visible;				 
+	}
+
+	}
 	
-
-
-
-	
-	ul {
+	.nav-ul {
 	
 		display: flex ;
 		justify-content: space-evenly;
@@ -43,11 +48,7 @@ nav {
 			visibility: hidden;
 			background-color: $background-color-light;
 
-			.show-nav {
-				width: 100vw;
-				right: 0;
-				visibility: visible;				 
-			}
+			
 		
 
 
@@ -86,40 +87,14 @@ nav {
 		}
 
 	}
-	// a {
-	// 	text-decoration: none;
-	// 	color: $primary-color;
-	// 	@media screen and (max-width: 576px) {
-	// 		text-align: 1000px;
-
-	// 		flex-direction: column;
-	// 		justify-content: center;
-	// 		align-items: center;
-	// 		position: fixed;
-	// 		right: -100vw;
-	// 		bottom: 0;
-	// 		height: 100vh;
-	// 		padding: 2rem;
-	// 		visibility: hidden;
-
-	// 		.show-nav {
-	// 			width: 100vw;
-	// 			right: 0;
-	// 			visibility: visible;				 
-	// 		}
-	// 	}
-	// }
+	
 
 	img {
 		display: flex;
 		height: 200px;
 		width: 200px;
 		margin-right: 350px;
-		@media screen and (max-width: 576px) {
-			//  width: 200px;
-  			// display: block;
-  		
-		}
+		
 	}
 
 	.navbar_link{//c'est les balise <a>
@@ -166,7 +141,7 @@ nav {
 	
 		}
 	}
-	
+
 	@media screen and (max-width:767px){
 		
 			
@@ -211,7 +186,7 @@ nav {
 	}
 	
 	
-}
+
 	
 
 

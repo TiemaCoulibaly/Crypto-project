@@ -32,7 +32,7 @@ const Navigation = () => {
 						</div>
 						{/* </NavLink> */}
 					{/* </li> */}
-					<ul>
+					<ul className="nav-ul">
 					<li className="list-item ">
 						<a href="/" className="navbar_link">Home</a>
 						{/* <NavLink to="/">Home</NavLink> */}
