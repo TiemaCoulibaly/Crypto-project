@@ -6,7 +6,6 @@ const Currency = () => {
   let sliders = document.querySelectorAll(".slider-wrapper");
 
   const { Graph, isLoad } = useGraphCurrency("bitcoin");
-  console.log(Graph.currency.one);
 
   window.addEventListener("resize", () => {
     for (let i = 0; i < sliders.length; i++) {
