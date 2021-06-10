@@ -34,21 +34,25 @@ const CryptoItem = ({ name, price, variation, image, symbol }) => {
 	useEffect(() => {
 		chart();
 	}, []);
+
+	// condition lorsque la variation est inférieur a 0 on fait appel a la class red qui contient le css background red
+	const vote = (vote) => {
+		if (vote < 0) {
+			return "red";
+		}
+	};
 	return (
 		<figure>
-			<h2>
-				{" "}
-				<img
-					src={image}
-					alt={symbol}
-					style={{
-						width: "25px",
-						height: "25px",
-						marginRight: "10px",
-					}}
-				/>
-				{name}
-			</h2>
+			<img
+				src={image}
+				alt={symbol}
+				style={{
+					width: "25px",
+					height: "25px",
+					marginRight: "10px",
+				}}
+			/>
+			<h2> {name}</h2>
 
 			<h3>{price}$</h3>
 			<div className="chart" style={{ width: "100%", height: "22vh" }}>
@@ -59,7 +63,9 @@ const CryptoItem = ({ name, price, variation, image, symbol }) => {
 					}}
 				/>
 			</div>
-			<figcaption>{variation}%</figcaption>
+			<figcaption className={`tag ${vote(variation)}`}>
+				{variation}%
+			</figcaption>
 		</figure>
 	);
 };
