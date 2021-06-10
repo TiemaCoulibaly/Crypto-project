@@ -5,11 +5,11 @@
 		flex-wrap: wrap;
 		align-items: center;
 		justify-content: space-between;
-		position: fixed;
+		//position: fixed;
 		width: 100%;
 		min-height: 75px;
 		padding: 1rem;
-		background-color: $background-color-light;
+		background-color: $background-color;
 		
 	}
 
@@ -46,7 +46,7 @@
 			height: 100vh;
 			padding: 2rem;
 			visibility: hidden;
-			background-color: $background-color-light;
+			background-color: $background-color;
 
 			
 		
@@ -59,10 +59,13 @@
 		
 	li {
 		list-style: none;
+		margin-right: 10px;
 		
 		
 		@media screen and (max-width: 767px) {
-			margin-top: 10px;
+			margin-top: 50px;
+			width: 300px;
+			text-align: center;
 		}
 
 	}
@@ -93,7 +96,7 @@
 		display: flex;
 		height: 200px;
 		width: 200px;
-		margin-right: 350px;
+		//margin-right: 350px;
 		
 	}
 
@@ -105,8 +108,8 @@
 
 		@media screen and (max-width: 767px) {
 			display: block;
-			padding: 1.5rem;
-			font-size: 5vw;
+			
+			font-size: 6vw;
 	
 		}
 		
@@ -115,6 +118,10 @@
 	
 	p {
 		color: $primary-color;
+		@media screen and (max-width: 767px) {
+		margin-top: 50px;
+		font-size: 4vw;
+		}
 	}
 
 	
