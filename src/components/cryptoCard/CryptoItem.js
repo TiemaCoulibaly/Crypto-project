@@ -37,7 +37,7 @@ const CryptoItem = ({ name, price, variation, image, symbol }) => {
 
 	// condition lorsque la variation est inférieur a 0 on fait appel a la class red qui contient le css background red
 	const vote = (vote) => {
-		if (vote <= 0) {
+		if (vote < 0) {
 			return "red";
 		}
 	};
