@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Line } from "react-chartjs-2";
 
 import "./cryptoItem.scss";
-const CryptoItem = ({ name, price, value }) => {
+const CryptoItem = ({ name, price, variation, image, symbol }) => {
 	const [chartData, setChartData] = useState({});
 	const chart = () => {
 		setChartData({
@@ -36,7 +36,20 @@ const CryptoItem = ({ name, price, value }) => {
 	}, []);
 	return (
 		<figure>
-			<h2>{name}</h2>
+			<h2>
+				{" "}
+				<img
+					src={image}
+					alt={symbol}
+					style={{
+						width: "25px",
+						height: "25px",
+						marginRight: "10px",
+					}}
+				/>
+				{name}
+			</h2>
+
 			<h3>{price}$</h3>
 			<div className="chart" style={{ width: "100%", height: "22vh" }}>
 				<Line
@@ -46,7 +59,7 @@ const CryptoItem = ({ name, price, value }) => {
 					}}
 				/>
 			</div>
-			<figcaption>{value}%</figcaption>
+			<figcaption>{variation}%</figcaption>
 		</figure>
 	);
 };
