@@ -36,11 +36,11 @@ nav {
 			align-items: center;
 			position: fixed;
 			
-			// right: -100vw;
+			right: -100vw;
 			bottom: 0;
 			height: 100vh;
 			padding: 2rem;
-			// visibility: hidden;
+			visibility: hidden;
 			background-color: $background-color-light;
 
 			.show-nav {
@@ -48,10 +48,7 @@ nav {
 				right: 0;
 				visibility: visible;				 
 			}
-			.hide-nav {
-			
-				visibility: hidden;				 
-			}
+		
 
 
 
