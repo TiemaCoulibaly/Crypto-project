@@ -3,11 +3,11 @@ import "./currency.scss";
 import useGraphCurrency from "../hooks/useGraphCurrency";
 
 const Currency = () => {
-  let sliders = document.querySelectorAll(".slider-wrapper");
+  // let sliders = document.querySelectorAll(".slider-wrapper");
 
   const { Graph, isLoad } = useGraphCurrency("bitcoin");
 
-  window.addEventListener("resize", () => {
+  /* window.addEventListener("resize", () => {
     for (let i = 0; i < sliders.length; i++) {
       setWrapperWidth(sliders[i]);
     }
@@ -72,12 +72,27 @@ const Currency = () => {
     let slides = wrapper.querySelectorAll(".slide");
     wrapper.style.width = slides.length * slides[0].clientWidth + "px";
   }
-
+*/
   return isLoad ? (
     "chargement..."
   ) : (
     <>
-      <nav className="menu"></nav>
+      <h3 className="currency__name">
+        Bitcoin 5 days Price Evolution <br />
+        {Graph.currency.one.toFixed(2)} <br />
+        {Graph.currency.two.toFixed(2)} <br />
+        {Graph.currency.three.toFixed(2)} <br />
+        {Graph.currency.four.toFixed(2)} <br />
+        {Graph.currency.five.toFixed(2)}
+      </h3>
+    </>
+  );
+};
+
+export default Currency;
+
+/*
+ <nav className="menu"></nav>
       <main>
         <h3 className="currency__name">
           Ethereum
@@ -231,8 +246,4 @@ const Currency = () => {
       <footer className="footer">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, hic.
       </footer>
-    </>
-  );
-};
-
-export default Currency;
+*/
