@@ -1,6 +1,7 @@
 import React from "react";
 import "./currency.scss";
 import useGraphCurrency from "../hooks/useGraphCurrency";
+import GraphCurrency from "./GraphCurrency";
 
 const Currency = () => {
   // let sliders = document.querySelectorAll(".slider-wrapper");
@@ -77,14 +78,14 @@ const Currency = () => {
     "chargement..."
   ) : (
     <>
-      <h3 className="currency__name">
-        Bitcoin 5 days Price Evolution <br />
-        {Graph.currency.one.toFixed(2)} <br />
-        {Graph.currency.two.toFixed(2)} <br />
-        {Graph.currency.three.toFixed(2)} <br />
-        {Graph.currency.four.toFixed(2)} <br />
-        {Graph.currency.five.toFixed(2)}
-      </h3>
+      <GraphCurrency
+        name="bitcoin"
+        one={Graph.currency.one}
+        two={Graph.currency.two}
+        three={Graph.currency.three}
+        four={Graph.currency.four}
+        five={Graph.currency.five}
+      />
     </>
   );
 };
