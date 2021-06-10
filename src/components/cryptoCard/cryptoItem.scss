@@ -40,10 +40,13 @@ main > article {
 	}
 }
 
-figcaption {
+.tag {
 	@include evol();
 	border-radius: 10px;
 	padding: 7px;
 	margin: 5px;
 	width: 60px;
+}
+.tag.red {
+	@include negative();
 }
