@@ -1,12 +1,9 @@
 import React from "react";
 import "./currency.scss";
-import useGraphCurrency from "../hooks/useGraphCurrency";
-import GraphCurrency from "./GraphCurrency";
+import ChartCard from "./ChartCard.js";
 
 const Currency = () => {
   // let sliders = document.querySelectorAll(".slider-wrapper");
-
-  const { Graph, isLoad } = useGraphCurrency("bitcoin");
 
   /* window.addEventListener("resize", () => {
     for (let i = 0; i < sliders.length; i++) {
@@ -74,18 +71,12 @@ const Currency = () => {
     wrapper.style.width = slides.length * slides[0].clientWidth + "px";
   }
 */
-  return isLoad ? (
-    "chargement..."
-  ) : (
+  return (
     <>
-      <GraphCurrency
-        name="bitcoin"
-        one={Graph.currency.one}
-        two={Graph.currency.two}
-        three={Graph.currency.three}
-        four={Graph.currency.four}
-        five={Graph.currency.five}
-      />
+      <ChartCard name="bitcoin" />
+      <ChartCard name="ethereum" />
+      <ChartCard name="litecoin" />
+      <ChartCard name="binancecoin" />
     </>
   );
 };
