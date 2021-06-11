@@ -91,7 +91,7 @@ const Currency = () => {
 				</div>
 			</main>
 
-			<div class="container">
+			{/* <div class="container">
 				<div id="currencies" class="section">
 					<div class="slider-wrapper">
 						<div class="slider currencies">
@@ -258,11 +258,11 @@ const Currency = () => {
 							</div>
 							<div class="right">
 								<i class="fas fa-chevron-right"></i>
-							</div>
+							</div> 
 						</nav>
 					</div>
 				</div>
-			</div>
+			</div> */}
 
 			<footer className="footer">
 				Lorem ipsum dolor sit amet consectetur adipisicing elit.

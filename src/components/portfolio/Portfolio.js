@@ -14,7 +14,7 @@ const Portfolio = () => {
 	return isLoading ? (
 		"chargement"
 	) : (
-		<div class="wallet">
+		<div className="wallet">
 			<h3>
 				<br />
 			</h3>
