@@ -1,15 +1,18 @@
 import useCryptoPrice from "../hooks/useCryptoPrice";
 import useWalletData from "../hooks/useWalletData";
+// import useGraphCurrency from "../hooks/useGraphCurrency";
 
 import "./portfolio.scss";
 
 const Portfolio = () => {
-	const { data } = useWalletData();
+  const { data } = useWalletData();
+  const { walletUsd, isLoading } = useCryptoPrice(data ? data[0].wallet : null);
 
-	const { walletUsd, isLoading } = useCryptoPrice(
-		data ? data[0].wallet : null
-	);
-	//console.log(walletUsd, isLoading);
+  // const { btc } = useGraphCurrency("bitcoin");
+  // console.log(btc);
+  // const { eth } = useGraphCurrency("ethereum");
+  // console.log(eth);
+
 
 	return isLoading ? (
 		"chargement"
@@ -51,6 +54,7 @@ const Portfolio = () => {
 			</p>
 		</div>
 	);
+
 };
 
 export default Portfolio;
