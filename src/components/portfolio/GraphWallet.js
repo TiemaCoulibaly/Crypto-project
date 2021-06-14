@@ -5,10 +5,10 @@ const GraphCurrency = ({ name, one, two, three, four, five }) => {
   const [chartData, setChartData] = useState({});
   const chart = () => {
     setChartData({
-      labels: ["5d", "72h", "48h", "24h", "Today"],
+      labels: ["btc", "eth", "btc", "ltc", "usdt"],
       datasets: [
         {
-          label: "5 days evolution",
+          label: "USD value",
           data: [one, two, three, four, five],
           backgroundColor: [
             "rgba(75, 192, 192, 0.2)",
@@ -35,14 +35,13 @@ const GraphCurrency = ({ name, one, two, three, four, five }) => {
   }, []);
 
   return (
-    <figure>
+    <>
       <p>
-        {name}
         <div className="chart">
           <Line data={chartData} options={{}} />
         </div>
       </p>
-    </figure>
+    </>
   );
 };
 export default GraphCurrency;
