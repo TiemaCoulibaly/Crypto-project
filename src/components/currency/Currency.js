@@ -86,8 +86,8 @@ const Currency = () => {
 
 export default Currency;
 
+		
 /*
- <nav className="menu"></nav>
       <main>
         <h3 className="currency__name">
           Ethereum
@@ -107,136 +107,8 @@ export default Currency;
         </div>
       </main>
 
-      <div class="container">
-        <div id="currencies" class="section">
-          <div class="slider-wrapper">
-            <div class="slider currencies">
-              <div class="wrapper">
-                <div class="currency slide category">
-                  <figure>
-                    <a href="https://github.com/Mehdi-Adel/Crypto-project">
-                      <img src="images/ethereum.png" alt="ethereum" />
-                    </a>
-                  </figure>
-                  <h4>2 000$</h4>
-                </div>
-                <div class="currency slide category">
-                  <figure>
-                    <a href="https://github.com/Mehdi-Adel/Crypto-project">
-                      <img src="images/ethereum.png" alt="ethereum" />
-                    </a>
-                  </figure>
-                  <h4>2 000$</h4>
-                </div>
-                <div class="currency slide category">
-                  <figure>
-                    <a href="https://github.com/Mehdi-Adel/Crypto-project">
-                      <img src="images/ethereum.png" alt="ethereum" />
-                    </a>
-                  </figure>
-                  <h4>2 000$</h4>
-                </div>
-                <div class="currency slide category">
-                  <figure>
-                    <a href="https://github.com/Mehdi-Adel/Crypto-project">
-                      <img src="images/ethereum.png" alt="ethereum" />
-                    </a>
-                  </figure>
-                  <h4>2 000$</h4>
-                </div>
-                <div class="currency slide category">
-                  <figure>
-                    <a href="https://github.com/Mehdi-Adel/Crypto-project">
-                      <img src="images/ethereum.png" alt="ethereum" />
-                    </a>
-                  </figure>
-                  <h4>2 000$</h4>
-                </div>
-                <div class="currency slide category">
-                  <figure>
-                    <a href="https://github.com/Mehdi-Adel/Crypto-project">
-                      <img src="images/ethereum.png" alt="ethereum" />
-                    </a>
-                  </figure>
-                  <h4>2 000$</h4>
-                </div>
-                <div class="currency slide category">
-                  <figure>
-                    <a href="https://github.com/Mehdi-Adel/Crypto-project">
-                      <img src="images/ethereum.png" alt="ethereum" />
-                    </a>
-                  </figure>
-                  <h4>2 000$</h4>
-                </div>
-                <div class="currency slide category">
-                  <figure>
-                    <a href="https://github.com/Mehdi-Adel/Crypto-project">
-                      <img src="images/ethereum.png" alt="ethereum" />
-                    </a>
-                  </figure>
-                  <h4>2 000$</h4>
-                </div>
-                <div class="currency slide category">
-                  <figure>
-                    <a href="https://github.com/Mehdi-Adel/Crypto-project">
-                      <img src="images/ethereum.png" alt="ethereum" />
-                    </a>
-                  </figure>
-                  <h4>2 000$</h4>
-                </div>
-                <div class="currency slide category">
-                  <figure>
-                    <a href="https://github.com/Mehdi-Adel/Crypto-project">
-                      <img src="images/ethereum.png" alt="ethereum" />
-                    </a>
-                  </figure>
-                  <h4>2 000$</h4>
-                </div>
-                <div class="currency slide category">
-                  <figure>
-                    <a href="https://github.com/Mehdi-Adel/Crypto-project">
-                      <img src="images/ethereum.png" alt="ethereum" />
-                    </a>
-                  </figure>
-                  <h4>2 000$</h4>
-                </div>
-                <div class="currency slide category">
-                  <figure>
-                    <a href="https://github.com/Mehdi-Adel/Crypto-project">
-                      <img src="images/ethereum.png" alt="ethereum" />
-                    </a>
-                  </figure>
-                  <h4>2 000$</h4>
-                </div>
-                <div class="currency slide category">
-                  <figure>
-                    <a href="https://github.com/Mehdi-Adel/Crypto-project">
-                      <img src="images/ethereum.png" alt="ethereum" />
-                    </a>
-                  </figure>
-                  <h4>2 000$</h4>
-                </div>
-                <div class="currency slide category">
-                  <figure>
-                    <a href="https://github.com/Mehdi-Adel/Crypto-project">
-                      <img src="images/ethereum.png" alt="ethereum" />
-                    </a>
-                  </figure>
-                  <h4>2 000$</h4>
-                </div>
-              </div>
-            </div>
-            <nav>
-              <div class="left disabled">
-                <i class="fas fa-chevron-left"></i>
-              </div>
-              <div class="right">
-                <i class="fas fa-chevron-right"></i>
-              </div>
-            </nav>
-          </div>
-        </div>
-      </div>
+
+     
 
       <footer className="footer">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, hic.
