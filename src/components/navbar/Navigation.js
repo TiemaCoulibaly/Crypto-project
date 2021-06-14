@@ -3,24 +3,25 @@ import { NavLink } from "react-router-dom";
 import LogoutButton from "../buttons/LogoutButton";
 import { useGoogleAuth } from "../context/googleAuth";
 import "./navigation.scss";
-import {useState} from 'react';
+import { useState } from "react";
 
 const Navigation = () => {
-	const { isSignedIn, googleUser } = useGoogleAuth();
+  const { isSignedIn, googleUser } = useGoogleAuth();
 
-	const [showLinks,setShowLinks]= useState(false)
+  const [showLinks, setShowLinks] = useState(false);
 
-	const handleShowLinks = () =>{
-		setShowLinks(!showLinks)
-	}
+  const handleShowLinks = () => {
+    setShowLinks(!showLinks);
+  };
 
-	console.log(showLinks);
+  console.log(showLinks);
 
-	return (
-		 <header>
-			<nav className={`navbar ${showLinks? "show-nav":"hide-nav"}`}>
-				{/* <ul>
+  return (
+    <header>
+      <nav className={`navbar ${showLinks ? "show-nav" : "hide-nav"}`}>
+        {/* <ul>
 					<li> */}
+
 						{/* <NavLink exact to="/"> */}
 						<div>
 						<a href="/">

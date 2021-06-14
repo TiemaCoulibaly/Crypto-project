@@ -77,6 +77,9 @@ const Currency = () => {
       <ChartCard name="ethereum" />
       <ChartCard name="litecoin" />
       <ChartCard name="binancecoin" />
+      <ChartCard name="dogecoin" />
+      <ChartCard name="cosmos" />
+      <ChartCard name="metal" />
     </>
   );
 };
