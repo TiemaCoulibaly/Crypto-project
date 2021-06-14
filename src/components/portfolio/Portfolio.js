@@ -1,6 +1,6 @@
 import useCryptoPrice from "../hooks/useCryptoPrice";
 import useWalletData from "../hooks/useWalletData";
-// import useGraphCurrency from "../hooks/useGraphCurrency";
+import GraphWallet from "./GraphWallet";
 
 import "./portfolio.scss";
 
@@ -13,19 +13,28 @@ const Portfolio = () => {
   // const { eth } = useGraphCurrency("ethereum");
   // console.log(eth);
 
+
   return isLoading ? (
     "chargement"
   ) : (
     <div class="wallet">
-      <h3>
-        <br />
-      </h3>
       <p>
         <button>1D</button>
         <button>1M</button>
         <button>ALL</button>
       </p>
-      <h2> Wallet 0 </h2>
+      <h3>
+        <GraphWallet
+          name="Wallet Current Value USD"
+          one={walletUsd.bitcoin.usd.toFixed(2)}
+          two={walletUsd.ethereum.usd.toFixed(2)}
+          three={walletUsd.litecoin.usd.toFixed(2)}
+          four={walletUsd.tether.usd.toFixed(2)}
+          five={walletUsd.tether.usd.toFixed(2)}
+        />{" "}
+        <br />
+      </h3>
+
       <p className="balance">
         {walletUsd.bitcoin.amount} btc = {walletUsd.bitcoin.usd.toFixed(2)} $
       </p>
@@ -47,6 +56,7 @@ const Portfolio = () => {
       <p className="balance">Total: {walletUsd.total.usd.toFixed(2)} USD </p>
     </div>
   );
+
 };
 
 export default Portfolio;

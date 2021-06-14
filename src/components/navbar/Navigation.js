@@ -1,5 +1,5 @@
 import React from "react";
-//import { NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import LogoutButton from "../buttons/LogoutButton";
 import { useGoogleAuth } from "../context/googleAuth";
 import "./navigation.scss";
@@ -21,6 +21,7 @@ const Navigation = () => {
 			<nav className={`navbar ${showLinks ? "show-nav" : "hide-nav"}`}>
 				{/* <ul>
 					<li> */}
+
 				{/* <NavLink exact to="/"> */}
 				<div>
 					<a href="/">
@@ -45,10 +46,10 @@ const Navigation = () => {
 					{isSignedIn ? (
 						<>
 							<li className="list-item">
+								<NavLink to="/portfolio"> </NavLink>
 								<a href="/portfolio" className="navbar_link">
 									Portfolio
 								</a>
-								{/* <NavLink to="/portfolio">Portfolio</NavLink> */}
 							</li>
 							<p>Bonjour, {googleUser.profileObj.name}</p>
 							<LogoutButton />

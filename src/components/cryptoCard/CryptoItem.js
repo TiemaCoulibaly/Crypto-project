@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Line } from "react-chartjs-2";
-
+import ChartCard from "../currency/ChartCard.js";
 import "./cryptoItem.scss";
 const CryptoItem = ({ name, price, variation, image, symbol }) => {
 	const [chartData, setChartData] = useState({});
@@ -53,16 +53,9 @@ const CryptoItem = ({ name, price, variation, image, symbol }) => {
 				}}
 			/>
 			<h2> {name}</h2>
-
+			<ChartCard name={name.toLowerCase()} />
 			<h3>{price}$</h3>
-			<div className="chart" style={{ height: "22vh" }}>
-				<Line
-					data={chartData}
-					options={{
-						responsive: true,
-					}}
-				/>
-			</div>
+
 			<figcaption className={`tag ${vote(variation)}`}>
 				{variation}%
 			</figcaption>
