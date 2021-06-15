@@ -1,14 +1,16 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import { useHistory } from "react-router-dom";
 
-const Private = ({ history }) => {
+const Private = () => {
 	const [error, setError] = useState("");
 	const [privateData, setPrivateData] = useState("");
+	let history = useHistory();
 
 	useEffect(() => {
 		if (!localStorage.getItem("authToken")) {
-			history.push("/login");
+			history.push("/");
 		}
 
 		const fetchPrivateData = async () => {
@@ -26,7 +28,7 @@ const Private = ({ history }) => {
 				setPrivateData(data.data);
 			} catch (error) {
 				localStorage.removeItem("authToken");
-				setError("Vous devez vous connecter pour accéder à cette page");
+				setError("Vous devez vous connecter");
 			}
 		};
 
@@ -42,9 +44,9 @@ const Private = ({ history }) => {
 		<span className="error-message">{error}</span>
 	) : (
 		<>
-			<div style={{ background: "green", color: "white" }}>
+			{/* <div style={{ background: "green", color: "white" }}>
 				{privateData}
-			</div>
+			</div> */}
 			<button onClick={logoutHandler}>Se déconnecter</button>
 		</>
 	);

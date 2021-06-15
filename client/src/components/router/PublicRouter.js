@@ -10,7 +10,7 @@ const PublicRouter = ({ component: Component, ...rest }) => {
 			<Route
 				{...rest}
 				render={(props) =>
-					!isSignedIn ? (
+					!isSignedIn || !localStorage.getItem("authToken") ? (
 						<Component {...props} />
 					) : (
 						<Redirect exact to="/home" />

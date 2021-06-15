@@ -3,18 +3,21 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import "../login/login.scss";
 
+import { useHistory } from "react-router-dom";
+
 import LoginButton from "../buttons/LoginButton";
 
-const Login = ({ history }) => {
+const Login = () => {
 	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
 	const [error, setError] = useState("");
+	let history = useHistory();
 
 	// Une fois que l'utilisateur est connecté, on ne veut pas qu'il aille sur les pages Register et Login
 
 	useEffect(() => {
 		if (localStorage.getItem("authToken")) {
-			history.push("/");
+			history.push("/home");
 		}
 	}, [history]);
 
