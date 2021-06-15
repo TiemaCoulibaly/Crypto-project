@@ -46,7 +46,7 @@ const Navigation = () => {
 					{isSignedIn ? (
 						<>
 							<li className="list-item">
-								<NavLink hidden to="/portfolio"> qdfdfd</NavLink>
+								{/* <NavLink hidden to="/portfolio"> qdfdfd</NavLink> */}
 								<a href="/portfolio" aria-current="page" className="active">
 									Portfolio
 								</a>
