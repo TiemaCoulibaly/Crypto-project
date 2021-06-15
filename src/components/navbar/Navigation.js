@@ -44,7 +44,7 @@ const Navigation = () => {
 					{isSignedIn ? (
 						<>
 							<li className="list-item">
-							<NavLink to="/portfolio">	</NavLink>
+							<NavLink to="/portfolio">	cgchjvn</NavLink>
 								<a href="/portfolio" className="navbar_link">Portfolio</a>
 							
 							</li>
@@ -54,7 +54,7 @@ const Navigation = () => {
 					) : (
 						<li className="list-item">
 							<a href="/login" className="navbar_link">Login</a>
-							{/* <NavLink to="/login">Login</NavLink> */}
+							<NavLink to="/login">Login</NavLink>
 						</li>
 					)}
 				
