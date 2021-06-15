@@ -5,11 +5,11 @@ import Login from "../login/Login";
 import Portfolio from "../portfolio/Portfolio";
 import Currency from "../currency/Currency";
 import NotFound from "../notfound/NotFound";
-import Auth from "../auth/Auth";
+
 import Register from "../register/Register";
 import ForgotPassword from "../forgotPassword/ForgotPassword";
 import ResetPassword from "../resetPassword/ResetPassword";
-import Private from "../private/Private";
+// import Private from "../private/Private";
 
 // Routing
 import PublicRouter from "./PublicRouter";
@@ -20,14 +20,14 @@ const Routes = () => {
 	return (
 		<Switch>
 			{/* <PublicRouter exact path="/" component={Private} /> */}
+			{/* <PrivateRoute exact path="/" component={Private} /> */}
+			<PublicRouter exact path="/" component={Home} />
+			<PrivateRoute exact path="/home" component={Home} />
+			<PrivateRouter exact path="/home" component={Home} />
+			<PrivateRoute exact path="/portfolio" component={Portfolio} />
 			<PublicRouter exact path="/login" component={Login} />
-			{/* user auth */}
-			<PrivateRoute path="/" component={Private} />
-			{/* gmail auth */}
-			<PrivateRouter path="/home" component={Home} />
-			<PrivateRouter path="/portfolio" component={Portfolio} />
-			<Route path="/currency" component={Currency} />
-			<PublicRouter exact path="/auth" component={Auth} />
+			<PublicRouter exact path="/currency" component={Currency} />
+
 			<PublicRouter exact path="/register" component={Register} />
 			<PublicRouter
 				exact
@@ -39,7 +39,13 @@ const Routes = () => {
 				path="/resetpassword:resetToken"
 				component={ResetPassword}
 			/>
-			<PrivateRouter exact path="/private" component={Private} />
+			{/* user auth */}
+			{/* <PrivateRoute exact path="/home" component={Home} /> */}
+			{/* gmail auth */}
+			{/* <PrivateRouter exact path="/home" component={Home} /> */}
+			{/* <PrivateRouter exact path="/portfolio" component={Portfolio} /> */}
+
+			{/* <PrivateRouter exact path="/private" component={Private} /> */}
 
 			<PublicRouter exact path="*" component={NotFound} />
 		</Switch>

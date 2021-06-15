@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import LogoutButton from "../buttons/LogoutButton";
 import { useGoogleAuth } from "../context/googleAuth";
 import "./navigation.scss";
-import { useState } from "react";
+
+import Private from "../private/Private";
 
 const Navigation = () => {
 	const { isSignedIn, googleUser } = useGoogleAuth();
@@ -43,7 +44,7 @@ const Navigation = () => {
 						</a>
 						{/* <NavLink to="/currency">Currency</NavLink> */}
 					</li>
-					{isSignedIn ? (
+					{localStorage.getItem("authToken") || isSignedIn ? (
 						<>
 							<li className="list-item">
 								<NavLink to="/portfolio"> </NavLink>
@@ -51,7 +52,10 @@ const Navigation = () => {
 									Portfolio
 								</a>
 							</li>
-							<p>Bonjour, {googleUser.profileObj.name}</p>
+							{/* {isSignedIn && (
+								<p>Bonjour, {googleUser.profileObj.name}</p>
+							)} */}
+							<Private />
 							<LogoutButton />
 						</>
 					) : (
