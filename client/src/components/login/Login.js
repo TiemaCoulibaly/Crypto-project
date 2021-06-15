@@ -58,7 +58,7 @@ const Login = ({ history }) => {
 						type="email"
 						required
 						id="email"
-						placeholder="Entrez votre adresse mail"
+						placeholder="Entrez votre addresse mail"
 						value={email}
 						onChange={(e) => setEmail(e.target.value)}
 						tabIndex={1}
