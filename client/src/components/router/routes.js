@@ -11,28 +11,37 @@ import ForgotPassword from "../forgotPassword/ForgotPassword";
 import ResetPassword from "../resetPassword/ResetPassword";
 import Private from "../private/Private";
 
-
 // Routing
 import PublicRouter from "./PublicRouter";
 import PrivateRouter from "./PrivateRouter";
 import PrivateRoute from "../routing/PrivateRoute";
 
-
 const Routes = () => {
 	return (
 		<Switch>
-			<PublicRouter exact path="/" component={Home} />
+			{/* <PublicRouter exact path="/" component={Private} /> */}
 			<PublicRouter exact path="/login" component={Login} />
+			{/* user auth */}
+			<PrivateRoute path="/" component={Private} />
+			{/* gmail auth */}
 			<PrivateRouter path="/home" component={Home} />
 			<PrivateRouter path="/portfolio" component={Portfolio} />
 			<Route path="/currency" component={Currency} />
 			<PublicRouter exact path="/auth" component={Auth} />
 			<PublicRouter exact path="/register" component={Register} />
-			<PublicRouter exact path="/forgotpassword" component={ForgotPassword} />
-			<PublicRouter exact path="/resetpassword:resetToken" component={ResetPassword} />
+			<PublicRouter
+				exact
+				path="/forgotpassword"
+				component={ForgotPassword}
+			/>
+			<PublicRouter
+				exact
+				path="/resetpassword:resetToken"
+				component={ResetPassword}
+			/>
 			<PrivateRouter exact path="/private" component={Private} />
 
-			<PublicRouter exact path="*" component={NotFound} />      
+			<PublicRouter exact path="*" component={NotFound} />
 		</Switch>
 	);
 };

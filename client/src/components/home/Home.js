@@ -1,6 +1,7 @@
 import React from "react";
 import CryptoItem from "../cryptoCard/CryptoItem";
 import useCryptoCurrentValue from "../hooks/useCryptoCurrentValue";
+import Private from "../private/Private";
 
 import "./home.scss";
 const Home = () => {
@@ -10,6 +11,7 @@ const Home = () => {
 		"En cours de chargement ..."
 	) : (
 		<div>
+			<Private />
 			<main>
 				<article>
 					{btcUsd.map((crypto, key) => {
