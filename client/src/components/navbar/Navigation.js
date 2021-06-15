@@ -47,8 +47,8 @@ const Navigation = () => {
 					{localStorage.getItem("authToken") || isSignedIn ? (
 						<>
 							<li className="list-item">
-								<NavLink to="/portfolio"> </NavLink>
-								<a href="/portfolio" className="navbar_link">
+								{/* <NavLink hidden to="/portfolio"> qdfdfd</NavLink> */}
+								<a href="/portfolio" aria-current="page" className="active">
 									Portfolio
 								</a>
 							</li>

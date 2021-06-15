@@ -18,7 +18,7 @@ import PrivateRoute from "../routing/PrivateRoute";
 
 const Routes = () => {
 	return (
-		<Switch>
+<Switch>
 			{/* <PublicRouter exact path="/" component={Private} /> */}
 			{/* <PrivateRoute exact path="/" component={Private} /> */}
 			<PublicRouter exact path="/" component={Home} />
