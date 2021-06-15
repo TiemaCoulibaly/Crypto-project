@@ -19,10 +19,10 @@ import PrivateRoute from "../routing/PrivateRoute";
 const Routes = () => {
 	return (
 		<Switch>
-			<PublicRouter exact path="/" component={Private} />
+			{/* <PublicRouter exact path="/" component={Private} /> */}
 			<PublicRouter exact path="/login" component={Login} />
 			{/* user auth */}
-			<PrivateRoute path="/home" component={Home} />
+			<PrivateRoute path="/" component={Private} />
 			{/* gmail auth */}
 			<PrivateRouter path="/home" component={Home} />
 			<PrivateRouter path="/portfolio" component={Portfolio} />
