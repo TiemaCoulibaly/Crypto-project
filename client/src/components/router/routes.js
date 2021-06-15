@@ -19,29 +19,31 @@ import PrivateRoute from "../routing/PrivateRoute";
 const Routes = () => {
 	return (
 		<Switch>
-			{/* <PublicRouter exact path="/" component={Private} /> */}
-			<PublicRouter exact path="/login" component={Login} />
+			{/* <PublicRouter exact path="/" component={Home} /> */}
+			
 			{/* user auth */}
-			<PrivateRoute path="/" component={Private} />
+			
 			{/* gmail auth */}
-			<PrivateRouter path="/home" component={Home} />
-			<PrivateRouter path="/portfolio" component={Portfolio} />
-			<Route path="/currency" component={Currency} />
-			<PublicRouter exact path="/auth" component={Auth} />
-			<PublicRouter exact path="/register" component={Register} />
-			<PublicRouter
+			<Route path="/home" component={Home} />
+			<Route path="/portfolio" component={Portfolio} />
+			{/* <PrivateRoute path="/" component={Home} /> */}
+			<Route exact path="/login" component={Login} />
+			<Route exact path="/currency" component={Currency} />
+			<Route exact path="/auth" component={Auth} />
+			<Route exact path="/register" component={Register} />
+			<Route
 				exact
 				path="/forgotpassword"
 				component={ForgotPassword}
 			/>
-			<PublicRouter
+			<Route
 				exact
 				path="/resetpassword:resetToken"
 				component={ResetPassword}
 			/>
-			<PrivateRouter exact path="/private" component={Private} />
+			<Route exact path="/private" component={Private} />
 
-			<PublicRouter exact path="*" component={NotFound} />
+			<Route exact path="*" component={NotFound} />
 		</Switch>
 	);
 };
