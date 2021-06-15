@@ -56,15 +56,10 @@ const Navigation = () => {
 						</>
 					) : (
 						<li className="list-item">
-<<<<<<< HEAD
-							<a href="/login" className="navbar_link">Login</a>
-							<NavLink to="/login">Login</NavLink>
-=======
 							<a href="/login" className="navbar_link">
 								Login
 							</a>
 							{/* <NavLink to="/login">Login</NavLink> */}
->>>>>>> 1f93ef5f8ab87c01533099e0698b59e8f916770e
 						</li>
 					)}
 				</ul>
