@@ -8,7 +8,8 @@ const GraphCurrency = ({ name, one, two, three, four, five }) => {
       labels: ["btc", "eth", "btc", "ltc", "usdt"],
       datasets: [
         {
-          label: "USD value",
+          type: "doughnut",
+          label: "USD($) ",
           data: [one, two, three, four, five],
           backgroundColor: [
             "rgba(75, 192, 192, 0.2)",
@@ -24,7 +25,7 @@ const GraphCurrency = ({ name, one, two, three, four, five }) => {
             "rgba(75, 192, 192, 1)",
             "rgba(75, 192, 192, 1)",
           ],
-          borderWidth: 1,
+          borderWidth: 3,
         },
       ],
     });
@@ -38,7 +39,16 @@ const GraphCurrency = ({ name, one, two, three, four, five }) => {
     <>
       <p>
         <div className="chart">
-          <Line data={chartData} options={{}} />
+          <Line
+            data={chartData}
+            options={{
+              plugins: {
+                legend: {
+                  display: false,
+                },
+              },
+            }}
+          />
         </div>
       </p>
     </>
