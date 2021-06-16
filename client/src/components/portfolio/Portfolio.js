@@ -13,16 +13,12 @@ const Portfolio = () => {
   // const { eth } = useGraphCurrency("ethereum");
   // console.log(eth);
 
-
   return isLoading ? (
     "chargement"
   ) : (
     <div class="wallet">
-      <p>
-        <button>1D</button>
-        <button>1M</button>
-        <button>ALL</button>
-      </p>
+      <p className="balance">Composition de votre wallet Crypto</p>
+      <br />
       <h3>
         <GraphWallet
           name="Wallet Current Value USD"
@@ -56,7 +52,6 @@ const Portfolio = () => {
       <p className="balance">Total: {walletUsd.total.usd.toFixed(2)} USD </p>
     </div>
   );
-
 };
 
 export default Portfolio;
