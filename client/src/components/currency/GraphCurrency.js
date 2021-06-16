@@ -37,9 +37,17 @@ const GraphCurrency = ({ name, one, two, three, four, five }) => {
 	return (
 		<div>
 			<p>
-				{name}
 				<div className="chart">
-					<Line data={chartData} options={{}} />
+					<Line
+						data={chartData}
+						options={{
+							plugins: {
+								legend: {
+									display: false,
+								},
+							},
+						}}
+					/>
 				</div>
 			</p>
 		</div>

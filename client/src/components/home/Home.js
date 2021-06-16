@@ -28,19 +28,21 @@ const Home = () => {
 				</article>
 
 				<div className="details">
-					<h2>Pourquoi investir dans la crypto ?</h2>
-
-					<p>
-						Lorem ipsum, dolor sit amet consectetur adipisicing
-						elit. Deleniti minima labore expedita quas. Vitae, unde
-						reiciendis laborum veniam mollitia quidem ratione quas
-						autem quae maiores minus delectus pariatur neque facere
-						necessitatibus. Laudantium soluta nulla ipsa tenetur
-						fugiat iure voluptatibus, ratione quibusdam suscipit, ea
-						alias sunt sint eius cupiditate consequatur! Officia,
-						ipsum odio animi quis corporis illum veritatis beatae
-						ullam veniam?
-					</p>
+					<h1>Ce que vous pouvez faire sur Crystal ?</h1>
+					<article className="article-container">
+						<article>
+							<h2>Derniers cours de cryptomonnaie</h2>
+							<img src="images/finance.png" alt="finance" />
+						</article>
+						<article>
+							<h2>Acheter de la cryptomonnaie</h2>
+							<img src="images/saving.png" alt="saving" />
+						</article>
+						<article>
+							<h2>Suivre la valeur de votre portfeuille </h2>
+							<img src="images/wallet.png" alt="wallet" />
+						</article>
+					</article>
 				</div>
 			</main>
 		</div>
