@@ -1,11 +1,11 @@
 @import "../main.scss";
 
 .currency__title {
-    color : $special-color;
+  color: $special-color;
 }
 
 .menu__list--title {
-	list-style-type: none;
+  list-style-type: none;
 }
 
 .currency__name {
@@ -37,15 +37,17 @@ main {
   padding: 60px 0;
 }
 .container {
-  max-width: 1500px;
-  margin: 0 auto;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-top: 20px;
 }
 .section {
   margin-bottom: 40px;
 }
 
 .right {
-    float: right;
+  float: right;
 }
 
 .slider-wrapper {
@@ -69,7 +71,7 @@ main {
   background-color: #82ca9c;
   color: white;
   font-size: 21px;
-  box-shadow: 0 0 6px 1px rgba(0,0,0, .3);
+  box-shadow: 0 0 6px 1px rgba(0, 0, 0, 0.3);
   border-radius: 100%;
   display: flex;
   align-items: center;
@@ -93,7 +95,7 @@ main {
   display: flex;
   flex-wrap: wrap;
 }
-.slider  .slide {
+.slider .slide {
   width: 360px;
   padding-left: 15px;
   padding-right: 15px;
@@ -104,7 +106,7 @@ main {
 }
 
 @media only screen and (max-width: 768px) {
-  .slider  .slide {
+  .slider .slide {
     width: 50vw;
   }
 }
@@ -128,7 +130,7 @@ main {
   width: 210px;
 }
 @media only screen and (max-width: 768px) {
-  .currencies  .currency {
+  .currencies .currency {
     width: 50vw;
   }
 }
