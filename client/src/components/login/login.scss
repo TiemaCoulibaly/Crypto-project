@@ -56,3 +56,20 @@ input {
 	color: #52b6b2;
 	border: 1px solid #52b6b2;
 }
+button {
+	@include border-grey();
+	color: $background-color-light;
+	margin: 5px;
+	padding: 10px;
+	border-radius: 10px;
+	background-color: $special-color;
+	&:hover {
+		box-shadow: 2px 2px 2px $primary-color;
+	}
+}
+span > a {
+	&:hover {
+		padding: 5px;
+		box-shadow: 1px 1px $primary-color;
+	}
+}

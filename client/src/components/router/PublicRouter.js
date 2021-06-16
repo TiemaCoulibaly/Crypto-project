@@ -1,9 +1,10 @@
 import React from "react";
-import { Route, Redirect } from "react-router-dom";
+import { Route, Redirect, useHistory } from "react-router-dom";
 import { useGoogleAuth } from "../context/googleAuth";
 
 const PublicRouter = ({ component: Component, ...rest }) => {
 	const { isSignedIn } = useGoogleAuth();
+	let history = useHistory();
 
 	return (
 		<div>
@@ -13,7 +14,8 @@ const PublicRouter = ({ component: Component, ...rest }) => {
 					!isSignedIn || !localStorage.getItem("authToken") ? (
 						<Component {...props} />
 					) : (
-						<Redirect exact to="/home" />
+						history.push("/home")
+						// <Redirect exact to="/home" />
 					)
 				}
 			/>

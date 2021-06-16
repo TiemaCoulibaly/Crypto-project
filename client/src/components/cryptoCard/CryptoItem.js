@@ -22,13 +22,15 @@ const CryptoItem = ({ name, price, variation, image, symbol }) => {
 					}}
 				/>
 				<h2> {name}</h2>
+				<figcaption className={`tag ${vote(variation)}`}>
+					{variation}%
+				</figcaption>
 			</div>
-			<h3> {price}$</h3>
-			<ChartCard name={name.toLowerCase()} />
+			<h3>
+				Last price: <span>{price} $</span>
+			</h3>
 
-			<figcaption className={`tag ${vote(variation)}`}>
-				{variation}%
-			</figcaption>
+			<ChartCard name={name.toLowerCase()} />
 		</figure>
 	);
 };

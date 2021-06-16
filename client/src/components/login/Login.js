@@ -90,8 +90,10 @@ const Login = () => {
 						Se connecter
 					</button>
 					<span className="login-screen__subtext">
-						Vous n'avez pas encore de compte ?{" "}
-						<Link to="/register">S'inscrire</Link>
+						Pas encore de compte ?{" "}
+						<Link to="/register">
+							<u>S'inscrire </u>
+						</Link>
 					</span>
 				</form>
 				<LoginButton />
