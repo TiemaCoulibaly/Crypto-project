@@ -73,20 +73,20 @@ const Currency = () => {
 */
   return (
     <>
-      <ChartCard name="bitcoin" />
-      <ChartCard name="ethereum" />
-      <ChartCard name="litecoin" />
-      <ChartCard name="binancecoin" />
-      <ChartCard name="dogecoin" />
-      <ChartCard name="cosmos" />
-      <ChartCard name="metal" />
+      <div>
+        <ChartCard name="bitcoin" />
+        <ChartCard name="ethereum" />
+        <ChartCard name="litecoin" />
+        <ChartCard name="dogecoin" />
+        <ChartCard name="cosmos" />
+        <ChartCard name="metal" />
+      </div>
     </>
   );
 };
 
 export default Currency;
 
-		
 /*
       <main>
         <h3 className="currency__name">
