@@ -11,21 +11,21 @@ const GraphCurrency = ({ name, one, two, three, four, five }) => {
 			datasets: [
 				{
 					type: "doughnut",
-					label: "USD($) ",
+					label: "",
 					data: [one, two, three, four, five],
 					backgroundColor: [
-						"rgba(75, 192, 192, 0.2)",
-						"rgba(75, 192, 192, 0.2)",
-						"rgba(75, 192, 192, 0.2)",
-						"rgba(75, 192, 192, 0.2)",
-						"rgba(75, 192, 192, 0.2)",
+						"rgba(137, 166, 251)",
+						"rgba(75, 192, 192, 1)",
+						"rgba(120, 195, 251)",
+						"rgba(22, 224, 189)",
+						"rgba(152, 193, 217)",
 					],
 					borderColor: [
+						"rgba(137, 166, 251)",
 						"rgba(75, 192, 192, 1)",
-						"rgba(75, 192, 192, 1)",
-						"rgba(75, 192, 192, 1)",
-						"rgba(75, 192, 192, 1)",
-						"rgba(75, 192, 192, 1)",
+						"rgba(120, 195, 251)",
+						"rgba(22, 224, 189)",
+						"rgba(152, 193, 217)",
 					],
 					borderWidth: 3,
 				},
@@ -40,7 +40,12 @@ const GraphCurrency = ({ name, one, two, three, four, five }) => {
 	return (
 		<>
 			<p>
-				<div className="chart">
+				<div
+					className="chart"
+					style={{
+						width: "600px",
+						height: "auto",
+					}}>
 					<Line
 						data={chartData}
 						options={{

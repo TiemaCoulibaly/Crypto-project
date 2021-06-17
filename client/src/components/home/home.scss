@@ -18,6 +18,7 @@ main > article {
 	background-color: $background-color-light;
 	padding: 70px;
 	color: $primary-color;
+	justify-content: center;
 	.article-container {
 		display: flex;
 		flex-wrap: wrap;
