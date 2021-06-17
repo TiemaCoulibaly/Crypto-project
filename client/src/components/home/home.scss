@@ -9,6 +9,9 @@ main > article {
 	flex-wrap: wrap;
 	justify-content: center;
 }
+.spinner {
+	text-align: center;
+}
 .details {
 	@include border-grey();
 	margin-top: 100px;

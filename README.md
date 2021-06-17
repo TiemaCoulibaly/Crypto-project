@@ -76,3 +76,7 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 ### Gmail Authentication
 
 https://github.com/asyarb/react-use-googlelogin
+
+### Spinner
+
+https://github.com/davidhu2000/react-spinners

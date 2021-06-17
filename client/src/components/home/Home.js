@@ -1,13 +1,21 @@
 import React from "react";
 import CryptoItem from "../cryptoCard/CryptoItem";
 import useCryptoCurrentValue from "../hooks/useCryptoCurrentValue";
+import ScaleLoader from "react-spinners/ScaleLoader";
 
 import "./home.scss";
 const Home = () => {
 	const { btcUsd, isLoading } = useCryptoCurrentValue();
 
 	return isLoading ? (
-		"En cours de chargement ..."
+		<div className="spinner">
+			<ScaleLoader
+				loading={isLoading}
+				height={60}
+				width={15}
+				color="#52b6b2"
+			/>
+		</div>
 	) : (
 		<div>
 			<main>

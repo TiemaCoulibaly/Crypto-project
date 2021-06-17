@@ -17,6 +17,7 @@
 		"react-router-dom": "^5.2.0",
 		"react-scripts": "4.0.3",
 		"react-social-login-buttons": "^3.4.0",
+		"react-spinners": "^0.11.0",
 		"react-use-googlelogin": "^0.12.5",
 		"web-vitals": "^1.1.1"
 	},
