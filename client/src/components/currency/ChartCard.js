@@ -2,6 +2,8 @@ import React from "react";
 import TuseGraphCurrency from "../hooks/TuseGraphCurrency";
 import GraphCurrency from "./GraphCurrency";
 
+import ClipLoader from "react-spinners/ClipLoader";
+
 const chartCard = (name) => {
 	let currency = name;
 
@@ -10,7 +12,9 @@ const chartCard = (name) => {
 	/*
 	 */
 	return isLoad ? (
-		"chargement..."
+		<div className="spinner">
+			<ClipLoader loading={isLoad} size={50} color="#52b6b2" />
+		</div>
 	) : (
 		<>
 			<GraphCurrency
