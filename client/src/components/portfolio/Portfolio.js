@@ -12,11 +12,6 @@ const Portfolio = () => {
 		data ? data[0].wallet : null
 	);
 
-	// const { btc } = useGraphCurrency("bitcoin");
-	// console.log(btc);
-	// const { eth } = useGraphCurrency("ethereum");
-	// console.log(eth);
-
 	return isLoading ? (
 		<div className="spinner">
 			<ScaleLoader
@@ -64,7 +59,7 @@ const Portfolio = () => {
 				{walletUsd.tether.usd.toFixed(2)} $
 			</p>
 			<br />
-			<p className="balance">
+			<p className="total">
 				Total: {walletUsd.total.usd.toFixed(2)} USD{" "}
 			</p>
 		</div>
