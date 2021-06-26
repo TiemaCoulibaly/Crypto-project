@@ -17,10 +17,10 @@ app.use("/api/auth", require("./routes/auth"));
 app.use("/api/private", require("./routes/private"));
 
 // ... other app.use middleware
-app.use(express.static(path.join(__dirname, "./client", "build")));
+app.use(express.static(path.join(__dirname, "build", "index.html")));
 
 app.get("*", (req, res) => {
-	res.sendFile(path.join(__dirname, "client", "build", "index.html"));
+	res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
 });
 
 // Error handler doit être le middleware placé en dernier
