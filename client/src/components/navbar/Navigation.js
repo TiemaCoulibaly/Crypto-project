@@ -48,7 +48,10 @@ const Navigation = () => {
 						<>
 							<li className="list-item">
 								{/* <NavLink hidden to="/portfolio"> qdfdfd</NavLink> */}
-								<a href="/portfolio" aria-current="page" className="active">
+								<a
+									href="/portfolio"
+									aria-current="page"
+									className="active">
 									Portfolio
 								</a>
 							</li>
@@ -60,10 +63,7 @@ const Navigation = () => {
 						</>
 					) : (
 						<li className="list-item">
-							<a href="/login" className="navbar_link">
-								Login
-							</a>
-							{/* <NavLink to="/login">Login</NavLink> */}
+							<NavLink to="/login">Login</NavLink>
 						</li>
 					)}
 				</ul>

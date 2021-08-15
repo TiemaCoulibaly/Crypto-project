@@ -16,12 +16,30 @@ app.use(express.json());
 app.use("/api/auth", require("./routes/auth"));
 app.use("/api/private", require("./routes/private"));
 
-// ... other app.use middleware
-app.use(express.static(path.join(__dirname, "client", "build")));
+//-------------------------deployment------------------------
+__dirname = path.resolve();
+if (process.env.NODE_ENV === "production") {
+	app.use(express.static(path.join(__dirname, "/client/build")));
+	app.get("*"),
+		(req, res) => {
+			res.sendFile(
+				path.resolve(__dirname, "client", "build", "index.html")
+			);
+		};
+} else {
+	app.get("/", (req, res) => {
+		res.send("API ids running...");
+	});
+}
 
-app.get("*", (req, res) => {
-	res.sendFile(path.join(__dirname, "client", "build", "index.html"));
-});
+//---------------------------
+// ... other app.use middleware
+// app.use(express.static(path.join(__dirname, "client", "build")));
+
+// app.get("*", (req, res) => {
+// 	res.sendFile(path.join(__dirname, "client", "build", "index.html"));
+// });
+//-------------------------deployment------------------------
 
 // Error handler doit être le middleware placé en dernier
 app.use(errorHandler);
