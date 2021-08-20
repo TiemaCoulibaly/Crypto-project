@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 
 import "./forgotPassword.scss";
-import { axiosInstance } from "../../../../config";
+import { axiosInstance } from "../../config";
 
 const ForgotPassword = () => {
 	const [email, setEmail] = useState("");

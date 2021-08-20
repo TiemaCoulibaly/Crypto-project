@@ -6,7 +6,7 @@ import "../login/login.scss";
 import { useHistory } from "react-router-dom";
 
 import LoginButton from "../buttons/LoginButton";
-import { axiosInstance } from "../../../../config";
+import { axiosInstance } from "../../config";
 
 const Login = () => {
 	const [email, setEmail] = useState("");

@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 
 import "./resetPassword.scss";
-import { axiosInstance } from "../../../../config";
+import { axiosInstance } from "../../config";
 
 const ResetPassword = ({ match }) => {
 	const [password, setPassword] = useState("");

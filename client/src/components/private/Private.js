@@ -1,8 +1,8 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import axios from "axios";
+
 import { useHistory } from "react-router-dom";
-import { axiosInstance } from "../../../../config";
+import { axiosInstance } from "../../config";
 
 const Private = () => {
 	const [error, setError] = useState("");
@@ -48,9 +48,9 @@ const Private = () => {
 		<span className="error-message">{error}</span>
 	) : (
 		<>
-			{/* <div style={{ background: "green", color: "white" }}>
+			<div style={{ background: "green", color: "white" }}>
 				{privateData}
-			</div> */}
+			</div>
 			<button onClick={logoutHandler}>Se déconnecter</button>
 		</>
 	);

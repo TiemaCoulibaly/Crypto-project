@@ -2,7 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./register.scss";
-import { axiosInstance } from "../../../../config";
+import { axiosInstance } from "../../config";
 
 const Register = ({ history }) => {
 	const [username, setUsername] = useState("");

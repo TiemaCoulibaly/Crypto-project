@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 
 import { Link } from "react-router-dom";
 import "./auth.scss";
-import { axiosInstance } from "../../../../config";
+import { axiosInstance } from "../../config";
 
 const Auth = ({ history }) => {
 	const [email, setEmail] = useState("");

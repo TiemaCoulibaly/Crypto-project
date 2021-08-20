@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-import { axiosInstance } from "../../../../config";
+import { axiosInstance } from "../../config";
 
 const useCryptoPrice = (wallet) => {
 	/* States */
