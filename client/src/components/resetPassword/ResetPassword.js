@@ -1,9 +1,9 @@
 import React from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import axios from "axios";
 
 import "./resetPassword.scss";
+import { axiosInstance } from "../../../../config";
 
 const ResetPassword = ({ match }) => {
 	const [password, setPassword] = useState("");
@@ -30,7 +30,7 @@ const ResetPassword = ({ match }) => {
 		}
 
 		try {
-			const { data } = await axios.put(
+			const { data } = await axiosInstance.put(
 				`/api/auth/resetpassword/${match.params.resetToken}`,
 				{
 					password,

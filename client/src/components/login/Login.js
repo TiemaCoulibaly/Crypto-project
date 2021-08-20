@@ -1,11 +1,12 @@
 import { useState, useEffect } from "react";
-import axios from "axios";
+
 import { Link } from "react-router-dom";
 import "../login/login.scss";
 
 import { useHistory } from "react-router-dom";
 
 import LoginButton from "../buttons/LoginButton";
+import { axiosInstance } from "../../../../config";
 
 const Login = () => {
 	const [email, setEmail] = useState("");
@@ -31,7 +32,7 @@ const Login = () => {
 		};
 
 		try {
-			const { data } = await axios.post(
+			const { data } = await axiosInstance.post(
 				"/api/auth/login",
 				{ email, password },
 				config
