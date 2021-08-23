@@ -15,8 +15,6 @@ const Navigation = () => {
 		setShowLinks(!showLinks);
 	};
 
-	console.log(showLinks);
-
 	return (
 		<header>
 			<nav className={`navbar ${showLinks ? "show-nav" : "hide-nav"}`}>
@@ -24,14 +22,7 @@ const Navigation = () => {
 					<li> */}
 
 				<NavLink exact to="/">
-					<div>
-						<a href="/">
-							<img
-								src="images/crystalcoin.png"
-								alt="cristal-logo"
-							/>
-						</a>
-					</div>
+					<img src="images/crystalcoin.png" alt="cristal-logo" />
 				</NavLink>
 				{/* </li> */}
 				<ul className="nav-ul">
@@ -55,18 +46,18 @@ const Navigation = () => {
 
 					{localStorage.getItem("authToken") || isSignedIn ? (
 						<>
-							<NavLink hidden to="/portfolio" className="active">
+							<NavLink to="/portfolio" className="active">
 								{" "}
 								Portfolio
 							</NavLink>
-							<li className="list-item">
+							{/* <li className="list-item">
 								<a
 									href="/portfolio"
 									aria-current="page"
 									className="active">
 									Portfolio
 								</a>
-							</li>
+							</li> */}
 							{isSignedIn && (
 								<p>Bonjour, {googleUser.profileObj.name}</p>
 							)}

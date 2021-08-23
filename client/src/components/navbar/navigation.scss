@@ -1,207 +1,163 @@
 @import "../main.scss";
 .navbar {
-	
-		display: flex;
-		flex-wrap: wrap;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-evenly;
+	//position: fixed;
+	width: 100%;
+	min-height: 75px;
+	padding: 1rem;
+	background-color: $background-color;
+}
+
+@media screen and (max-width: 900px) {
+	.show-nav .nav-ul {
+		width: 100vw;
+		right: 0;
+		visibility: visible;
+	}
+}
+
+.nav-ul {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+
+	@media screen and (max-width: 900px) {
+		// display: block;
+		// margin-left: auto;
+		// margin-right: auto;
+
+		// width: 200px;
+		// text-align: center;
+
+		flex-direction: column;
+		justify-content: center;
 		align-items: center;
-		justify-content: space-between;
-		//position: fixed;
-		width: 100%;
-		min-height: 75px;
-		padding: 1rem;
+		position: fixed;
+
+		right: -100vw;
+		bottom: 0;
+		height: 100vh;
+		padding: 2rem;
+		visibility: hidden;
 		background-color: $background-color;
-		
+	}
+}
+
+li {
+	list-style: none;
+	margin-right: 70px;
+
+	@media screen and (max-width: 900px) {
+		margin-top: 50px;
+		width: 300px;
+		text-align: center;
+	}
+}
+.list-item {
+	@include border-grey();
+	margin: 10px;
+	padding: 15px;
+	border-radius: 10px;
+	background-color: $background-color-light;
+	&:hover {
+		box-shadow: 2px 2px 2px $special-color;
 	}
 
 	@media screen and (max-width: 900px) {
-	.show-nav .nav-ul{
-		width: 100vw;
-		right: 0;
-		visibility: visible;				 
-	}
-
-	}
-	
-	.nav-ul {
-	
-		display: flex ;
-		justify-content: space-evenly;
-		align-items: center;
-
-		@media screen and (max-width: 900px) {
-  			// display: block;
-  			// margin-left: auto;
-  			// margin-right: auto;
-			
-			// width: 200px;
-			// text-align: center;
-
-			flex-direction:column ;
-			justify-content: center;
-			align-items: center;
-			position: fixed;
-			
-			right: -100vw;
-			bottom: 0;
-			height: 100vh;
-			padding: 2rem;
-			visibility: hidden;
-			background-color: $background-color;
-
-			
-		
-
-
-
-
-		}
-	}
-		
-	li {
-		list-style: none;
-		margin-right: 70px;
-		
-		
-		@media screen and (max-width: 900px) {
-			margin-top: 50px;
-			width: 300px;
-			text-align: center;
-		}
-
-	}
-	.list-item {
-		@include border-grey();
-		padding: 10px;
-		border-radius: 10px;
-		background-color: $background-color-light;
 		&:hover {
 			box-shadow: 2px 2px 2px $special-color;
 		}
-
-	
-		@media screen and (max-width: 900px) {
-			&:hover {
-				box-shadow: 2px 2px 2px $special-color;
-			}
-			
-			
-		
-
-		}
-
 	}
-	
+}
 
-	img {
-		display: flex;
-		height: 200px;
-		width: 200px;
-		//margin-right: 350px;
-		
+img {
+	display: flex;
+	height: 200px;
+	width: 200px;
+	//margin-right: 350px;
+}
+
+a {
+	//c'est les balise <a>
+	text-decoration: none;
+
+	padding: 0 0.3rem;
+	color: $primary-color;
+
+	@media screen and (max-width: 900px) {
+		display: block;
+
+		font-size: 6vw;
 	}
+}
 
-	a{//c'est les balise <a>
-		text-decoration: none;
-		
-		padding: 0 0.3rem;
-		color: $primary-color;
-
-		@media screen and (max-width: 900px) {
-			display: block;
-			
-			font-size: 6vw;
-	
-		}
-		
-	}
-
-	
-	p {
-		color: $primary-color;
-		margin-right: 70px;
-		@media screen and (max-width: 900px) {
+p {
+	color: $primary-color;
+	margin-right: 70px;
+	@media screen and (max-width: 900px) {
 		margin-top: 50px;
-		
+
 		font-size: 4vw;
+	}
+}
+
+.navbar_burger {
+	width: 40px;
+	height: 40px;
+	background: transparent;
+	border: none;
+	color: inherit;
+	// display: none;
+	@media screen and (max-width: 900px) {
+		display: block;
+		position: fixed;
+		top: 1rem;
+		right: 1rem;
+		&:hover {
+			cursor: pointer;
 		}
 	}
+}
 
-	
-
-
-
-
-	.navbar_burger{
+@media screen and (max-width: 900px) {
+	.burger-bar,
+	.burger-bar::before,
+	.burger-bar::after {
+		display: block;
 		width: 40px;
-		height: 40px;
-		background:transparent;
-		border: none;
-		color: inherit;
-		// display: none;
-		@media screen and (max-width:900px){
-			display: block;
-			position: fixed;
-			top: 1rem;
-			right: 1rem;
-			&:hover{
-				cursor: pointer;
-				}
-	
-	
-		}
+		height: 3px;
+		position: inherit;
+		border-radius: 3px;
+		background: white;
+		transition: all 0.5s ease-in-out;
 	}
 
-	@media screen and (max-width:900px){
-		
-			
-		
-			.burger-bar,
-			.burger-bar::before,
-			.burger-bar::after{
-				display:block;
-				width: 40px;
-				height: 3px;
-				position: inherit;
-				border-radius: 3px;
-				background:white;
-				transition: all .5s ease-in-out;
-			}
-
-			.burger-bar::before,
-			.burger-bar::after{
-				content: "";
-				position: absolute;
-				left:0;
-			}
-			.burger-bar::before{
-				transform: translateY(-12px);
-			}
-				
-			.burger-bar::after{
-				transform: translateY(12px);
-			}
-
-			.show-nav .burger-bar{
-				width: 0;
-				background: transparent;
-			}
-			
-			.show-nav .burger-bar::before{
-				transform: rotate(45deg);
-			}
-			.show-nav .burger-bar::after{
-				transform: rotate(-45deg);
-			}
+	.burger-bar::before,
+	.burger-bar::after {
+		content: "";
+		position: absolute;
+		left: 0;
 	}
-	
-	
+	.burger-bar::before {
+		transform: translateY(-12px);
+	}
 
-	
+	.burger-bar::after {
+		transform: translateY(12px);
+	}
 
+	.show-nav .burger-bar {
+		width: 0;
+		background: transparent;
+	}
 
-
-
-
-
-
-
+	.show-nav .burger-bar::before {
+		transform: rotate(45deg);
+	}
+	.show-nav .burger-bar::after {
+		transform: rotate(-45deg);
+	}
+}

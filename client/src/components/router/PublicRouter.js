@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, Redirect, useHistory } from "react-router-dom";
+import { Route, useHistory } from "react-router-dom";
 import { useGoogleAuth } from "../context/googleAuth";
 
 const PublicRouter = ({ component: Component, ...rest }) => {

@@ -1,5 +1,5 @@
 import React from "react";
-import { Switch, Route } from "react-router-dom";
+import { Switch } from "react-router-dom";
 import Home from "../home/Home";
 import Login from "../login/Login";
 import Portfolio from "../portfolio/Portfolio";
@@ -18,7 +18,7 @@ import PrivateRoute from "../routing/PrivateRoute";
 
 const Routes = () => {
 	return (
-<Switch>
+		<Switch>
 			{/* <PublicRouter exact path="/" component={Private} /> */}
 			{/* <PrivateRoute exact path="/" component={Private} /> */}
 			<PublicRouter exact path="/" component={Home} />

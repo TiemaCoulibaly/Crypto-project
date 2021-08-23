@@ -16,13 +16,6 @@ const TuseGraphCurrency = (currency) => {
 			const response = await axiosInstance.get(
 				`https://api.coingecko.com/api/v3/coins/${currency}/market_chart?vs_currency=usd&days=4&interval=daily`
 			);
-			//    console.log("a");
-			//    console.log(response.data.prices[0][1]);
-			//    console.log(response.data.prices[1][1]);
-			//    console.log(response.data.prices[2][1]);
-			//    console.log(response.data.prices[3][1]);
-			//   console.log(response.data.prices[4][1]);
-			//   console.log("b");
 
 			setGraph({
 				currency: {

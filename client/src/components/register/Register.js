@@ -57,7 +57,7 @@ const Register = ({ history }) => {
 		<div className="register-screen">
 			<form onSubmit={registerHandler} className="register-screen__form">
 				<h3 className="register-screen__title">S'inscrire</h3>
-				{error && <span className="error-message">{error}</span>}
+
 				<div className="form-group">
 					<label htmlFor="name">Nom d'utilisateur :</label>
 					<input
@@ -107,6 +107,7 @@ const Register = ({ history }) => {
 						onChange={(e) => setConfirmPassword(e.target.value)}
 					/>
 				</div>
+				{error && <span className="error-message">{error}</span>}
 
 				<button type="submit" className="btn btn-primary">
 					S'inscrire

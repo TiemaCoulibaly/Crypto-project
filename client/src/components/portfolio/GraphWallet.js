@@ -5,6 +5,7 @@ import "./portfolio.scss";
 
 const GraphCurrency = ({ name, one, two, three, four, five }) => {
 	const [chartData, setChartData] = useState({});
+
 	const chart = () => {
 		setChartData({
 			labels: ["btc", "eth", "btc", "ltc", "usdt"],
@@ -35,6 +36,7 @@ const GraphCurrency = ({ name, one, two, three, four, five }) => {
 
 	useEffect(() => {
 		chart();
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
 
 	return (

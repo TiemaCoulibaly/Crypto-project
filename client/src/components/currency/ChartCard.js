@@ -9,12 +9,12 @@ const chartCard = (name) => {
 
 	const { Graph, isLoad } = TuseGraphCurrency(currency.name);
 
-	/*
-	 */
 	return isLoad ? (
-		<div className="spinner">
-			<ClipLoader loading={isLoad} size={50} color="#52b6b2" />
-		</div>
+		<>
+			<div className="spinner">
+				<ClipLoader loading={isLoad} size={50} color="#52b6b2" />
+			</div>
+		</>
 	) : (
 		<>
 			<GraphCurrency
