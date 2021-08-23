@@ -38,16 +38,16 @@ const Home = () => {
 				<div className="details">
 					<h1>Ce que vous pouvez faire sur Crystal ?</h1>
 					<article className="article-container">
-						<article>
+						<article className="article-item">
 							<h2>Derniers cours de cryptomonnaie</h2>
 							<img src="images/finance.png" alt="finance" />
 						</article>
-						<article>
+						<article className="article-item">
 							<h2>Acheter de la cryptomonnaie</h2>
 							<img src="images/saving.png" alt="saving" />
 						</article>
-						<article>
-							<h2>Suivre la valeur de votre portfeuille </h2>
+						<article className="article-item">
+							<h2>Suivre la valeur de votre portefeuille </h2>
 							<img src="images/wallet.png" alt="wallet" />
 						</article>
 					</article>

@@ -34,6 +34,7 @@ const GraphCurrency = ({ name, one, two, three, four, five }) => {
 
 	useEffect(() => {
 		chart();
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
 
 	return (

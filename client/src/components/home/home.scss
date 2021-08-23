@@ -8,6 +8,7 @@ main > article {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
+	align-items: center;
 }
 .spinner {
 	text-align: center;
@@ -16,18 +17,22 @@ main > article {
 	@include border-grey();
 	margin-top: 100px;
 	background-color: $background-color-light;
-	padding: 70px;
+	padding: 10px;
 	color: $primary-color;
 	justify-content: center;
 	.article-container {
 		display: flex;
 		flex-wrap: wrap;
-		justify-content: space-between;
+		justify-content: space-around;
 		margin: 50px;
-		article {
+		.article-item {
 			@include border-grey();
-			padding: 30px;
+			margin: 10px;
+			padding: 20px;
 			border-radius: 10px;
+			&:hover {
+				box-shadow: 2px 2px 2px $special-color;
+			}
 		}
 		h3 {
 			color: white;
@@ -57,18 +62,17 @@ footer {
 	color: $primary-color;
 }
 
-// .chart{
-//  @media (max-width: 1050px) {
+.chart {
+	@media (max-width: 1050px) {
+		display: block;
+		box-sizing: border-box;
+		height: 100%px;
+		width: 100%px;
+	}
+}
 
-// 		display: block;
-// 		box-sizing: border-box;
-// 		height: 100%px;
-// 		width: 100%px;
-// 	}
-//  }
+@media (min-width: 768px) {
+}
 
-// @media (min-width: 768px) {
-// }
-
-// @media screen and (min-width: 992px) {
-// }
+@media screen and (min-width: 992px) {
+}
