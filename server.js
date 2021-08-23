@@ -32,13 +32,6 @@ if (process.env.NODE_ENV === "production") {
 	});
 }
 
-//---------------------------
-// ... other app.use middleware
-// app.use(express.static(path.join(__dirname, "client", "build")));
-
-// app.get("*", (req, res) => {
-// 	res.sendFile(path.join(__dirname, "client", "build", "index.html"));
-// });
 //-------------------------deployment------------------------
 
 // Error handler doit être le middleware placé en dernier

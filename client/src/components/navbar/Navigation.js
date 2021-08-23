@@ -23,31 +23,43 @@ const Navigation = () => {
 				{/* <ul>
 					<li> */}
 
-				{/* <NavLink exact to="/"> */}
-				<div>
-					<a href="/">
-						<img src="images/crystalcoin.png" alt="cristal-logo" />
-					</a>
-				</div>
-				{/* </NavLink> */}
+				<NavLink exact to="/">
+					<div>
+						<a href="/">
+							<img
+								src="images/crystalcoin.png"
+								alt="cristal-logo"
+							/>
+						</a>
+					</div>
+				</NavLink>
 				{/* </li> */}
 				<ul className="nav-ul">
-					<li className="list-item ">
+					{/* <li className="list-item ">
 						<a href="/" className="navbar_link">
 							Home
 						</a>
-						{/* <NavLink to="/">Home</NavLink> */}
-					</li>
-					<li className="list-item">
+					</li> */}
+					<NavLink to="/" className="list-item">
+						Home
+					</NavLink>
+
+					{/* <li className="list-item">
 						<a href="/currency" className="navbar_link">
 							Currency
 						</a>
-						{/* <NavLink to="/currency">Currency</NavLink> */}
-					</li>
+					</li> */}
+					<NavLink to="/currency" className="list-item">
+						Currency
+					</NavLink>
+
 					{localStorage.getItem("authToken") || isSignedIn ? (
 						<>
+							<NavLink hidden to="/portfolio" className="active">
+								{" "}
+								Portfolio
+							</NavLink>
 							<li className="list-item">
-								{/* <NavLink hidden to="/portfolio"> qdfdfd</NavLink> */}
 								<a
 									href="/portfolio"
 									aria-current="page"
@@ -55,9 +67,9 @@ const Navigation = () => {
 									Portfolio
 								</a>
 							</li>
-							{/* {isSignedIn && (
+							{isSignedIn && (
 								<p>Bonjour, {googleUser.profileObj.name}</p>
-							)} */}
+							)}
 							<Private />
 							<LogoutButton />
 						</>
