@@ -46,7 +46,7 @@ const Navigation = () => {
 
 					{localStorage.getItem("authToken") || isSignedIn ? (
 						<>
-							<NavLink to="/portfolio" className="active">
+							<NavLink to="/portfolio" className="list-item">
 								{" "}
 								Portfolio
 							</NavLink>
