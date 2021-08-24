@@ -1,5 +1,5 @@
 import React from "react";
-import { Switch } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 import Home from "../home/Home";
 import Login from "../login/Login";
 import Portfolio from "../portfolio/Portfolio";
@@ -21,8 +21,9 @@ const Routes = () => {
 			<PublicRouter exact path="/" component={Home} />
 			<PrivateRoute exact path="/home" component={Home} />
 			<PrivateRouter exact path="/home" component={Home} />
-			<PrivateRouter exact path="/portfolio" component={Portfolio} />
-			<PrivateRouter exact path="/portfolio" component={Portfolio} />
+			{/* <PrivateRoute exact path="/portfolio" component={Portfolio} />
+			<PrivateRouter exact path="/portfolio" component={Portfolio} /> */}
+			<PublicRouter exact path="/portfolio" component={Portfolio} />
 			<PublicRouter exact path="/login" component={Login} />
 			<PublicRouter exact path="/currency" component={Currency} />
 
@@ -38,9 +39,8 @@ const Routes = () => {
 				component={ResetPassword}
 			/>
 
-			<PublicRouter exact path="*" component={NotFound} />
+			<Route component={NotFound} />
 		</Switch>
 	);
 };
-
 export default Routes;

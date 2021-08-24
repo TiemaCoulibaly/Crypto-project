@@ -21,17 +21,17 @@ const Portfolio = () => {
 					width={15}
 					color="#52b6b2"
 				/>
+				<br />
+				<span className="cors">
+					You have to enable you cors - Download this google extension
+					to see you portfolio
+					<br></br>
+					<u>
+						{" "}
+						https://chrome.google.com/webstore/detail/allow-cors-access-control/lhobafahddgcelffkeicbaginigeejlf?hl=fr
+					</u>
+				</span>
 			</div>
-
-			<span className="cors">
-				You have to enable you cors & Download this google extension to
-				see you portfolio graph
-				<br></br>
-				<u>
-					{" "}
-					https://chrome.google.com/webstore/detail/allow-cors-access-control/lhobafahddgcelffkeicbaginigeejlf?hl=fr
-				</u>
-			</span>
 		</>
 	) : (
 		<div className="wallet">

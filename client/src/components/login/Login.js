@@ -84,7 +84,6 @@ const Login = () => {
 						onChange={(e) => setPassword(e.target.value)}
 						tabIndex={2}
 					/>
-
 					<Link to="/register" className="btn-register">
 						S'inscrire
 					</Link>
@@ -92,7 +91,6 @@ const Login = () => {
 					<span className="login-screen__subtext">
 						Pas encore de compte ?{" "}
 					</span>
-
 					<button type="submit" tabIndex={3} className="register">
 						Se connecter
 					</button>

@@ -66,6 +66,7 @@ input {
 	border-radius: 10px;
 	background-color: $special-color;
 	text-decoration: none;
+
 	&:hover {
 		box-shadow: 2px 2px 2px $primary-color;
 	}
@@ -91,4 +92,7 @@ input {
 	&:hover {
 		box-shadow: 1px 1px $primary-color;
 	}
+}
+.login-screen__subtext {
+	color: white;
 }

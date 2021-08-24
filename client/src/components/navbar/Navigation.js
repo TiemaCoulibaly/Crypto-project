@@ -24,6 +24,10 @@ const Navigation = () => {
 					<NavLink to="/currency" className="list-item">
 						Currency
 					</NavLink>
+					<NavLink to="/portfolio" className="list-item">
+						{" "}
+						Portfolio
+					</NavLink>
 
 					{localStorage.getItem("authToken") || isSignedIn ? (
 						<>
