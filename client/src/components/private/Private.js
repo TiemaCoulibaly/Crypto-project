@@ -10,7 +10,7 @@ const Private = () => {
 	let history = useHistory();
 
 	useEffect(() => {
-		if (localStorage.getItem("authToken")) {
+		if (!localStorage.getItem("authToken")) {
 			history.push("/");
 		}
 
@@ -48,7 +48,7 @@ const Private = () => {
 		<span className="error-message">{error}</span>
 	) : (
 		<>
-			<button onClick={logoutHandler}>Se déconnecter</button>
+			<button onClick={logoutHandler}>Logout</button>
 		</>
 	);
 };
