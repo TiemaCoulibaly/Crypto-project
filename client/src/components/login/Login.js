@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
 import { Link } from "react-router-dom";
-import "../login/login.scss";
+import "./login.scss";
 
 import { useHistory } from "react-router-dom";
 
@@ -92,10 +92,10 @@ const Login = () => {
 					</button>
 					<span className="login-screen__subtext">
 						Pas encore de compte ?{" "}
-						<Link to="/register">
-							<u>S'inscrire </u>
-						</Link>
 					</span>
+					<Link to="/register" className="register">
+						S'inscrire
+					</Link>
 				</form>
 				<LoginButton />
 			</div>

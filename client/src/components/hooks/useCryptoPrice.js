@@ -1,6 +1,5 @@
+import axios from "axios";
 import { useState, useEffect } from "react";
-
-import { axiosInstance } from "../../config";
 
 const useCryptoPrice = (wallet) => {
 	/* States */
@@ -13,7 +12,7 @@ const useCryptoPrice = (wallet) => {
 			return;
 		}
 		const fetchData = async () => {
-			const response = await axiosInstance.get(
+			const response = await axios.get(
 				`https://api.coingecko.com/api/v3/simple/price?ids=bitcoin%2Cethereum%2Clitecoin%2Cbinancecoin%2Ctether&vs_currencies=usd`
 			);
 

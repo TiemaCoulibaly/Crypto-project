@@ -1,6 +1,7 @@
+import axios from "axios";
 import { useState, useEffect } from "react";
 
-import { axiosInstance } from "../../config";
+//import { axiosInstance } from "../../config";
 
 const TuseGraphCurrency = (currency) => {
 	/* States */
@@ -13,7 +14,7 @@ const TuseGraphCurrency = (currency) => {
 			return;
 		}
 		const fetchData = async () => {
-			const response = await axiosInstance.get(
+			const response = await axios.get(
 				`https://api.coingecko.com/api/v3/coins/${currency}/market_chart?vs_currency=usd&days=4&interval=daily`
 			);
 

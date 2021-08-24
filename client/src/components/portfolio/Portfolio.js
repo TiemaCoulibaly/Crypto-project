@@ -13,17 +13,29 @@ const Portfolio = () => {
 	);
 
 	return isLoading ? (
-		<div className="spinner">
-			<ScaleLoader
-				loading={isLoading}
-				height={60}
-				width={15}
-				color="#52b6b2"
-			/>
-		</div>
+		<>
+			<div className="spinner">
+				<ScaleLoader
+					loading={isLoading}
+					height={60}
+					width={15}
+					color="#52b6b2"
+				/>
+			</div>
+
+			<span className="cors">
+				You have to enable you cors & Download this google extension to
+				see you portfolio graph
+				<br></br>
+				<u>
+					{" "}
+					https://chrome.google.com/webstore/detail/allow-cors-access-control/lhobafahddgcelffkeicbaginigeejlf?hl=fr
+				</u>
+			</span>
+		</>
 	) : (
-		<div class="wallet">
-			<p className="balance">Composition de votre wallet Crypto</p>
+		<div className="wallet">
+			<h2 className="balance">Composition de votre wallet Crypto</h2>
 			<br />
 			<h3>
 				<GraphWallet
@@ -37,31 +49,31 @@ const Portfolio = () => {
 				<br />
 			</h3>
 
-			<p className="balance">
+			<span className="balance">
 				{walletUsd.bitcoin.amount} btc ={" "}
 				{walletUsd.bitcoin.usd.toFixed(2)} $
-			</p>
-			<p className="balance">
+			</span>
+			<span className="balance">
 				{walletUsd.ethereum.amount} eth ={" "}
 				{walletUsd.ethereum.usd.toFixed(2)} $
-			</p>
-			<p className="balance">
+			</span>
+			<span className="balance">
 				{walletUsd.binancecoin.amount} bnb ={" "}
 				{walletUsd.binancecoin.usd.toFixed(2)} $
-			</p>
-			<p className="balance">
+			</span>
+			<span className="balance">
 				{walletUsd.litecoin.amount} ltc ={" "}
 				{walletUsd.litecoin.usd.toFixed(2)} $
-			</p>
-			<p className="balance">
+			</span>
+			<span className="balance">
 				{" "}
 				{walletUsd.tether.amount} usdt ={" "}
 				{walletUsd.tether.usd.toFixed(2)} $
-			</p>
+			</span>
 			<br />
-			<p className="total">
+			<span className="total">
 				Total: {walletUsd.total.usd.toFixed(2)} USD{" "}
-			</p>
+			</span>
 		</div>
 	);
 };
