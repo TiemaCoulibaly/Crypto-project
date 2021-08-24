@@ -25,34 +25,7 @@ const Navigation = () => {
 						Currency
 					</NavLink>
 
-					{isSignedIn ? (
-						<>
-							<NavLink to="/portfolio" className="list-item">
-								{" "}
-								Portfolio
-							</NavLink>
-							<LogoutButton />
-						</>
-					) : (
-						<NavLink to="/login" className="list-item">
-							Login
-						</NavLink>
-					)}
-					{localStorage.getItem("authToken") ? (
-						<>
-							<NavLink to="/portfolio" className="list-item">
-								{" "}
-								Portfolio
-							</NavLink>
-							<Private />
-						</>
-					) : (
-						<NavLink to="/login" className="list-item">
-							Login
-						</NavLink>
-					)}
-
-					{/* {localStorage.getItem("authToken") || isSignedIn ? (
+					{localStorage.getItem("authToken") || isSignedIn ? (
 						<>
 							<NavLink to="/portfolio" className="list-item">
 								{" "}
@@ -60,7 +33,9 @@ const Navigation = () => {
 							</NavLink>
 							{isSignedIn && (
 								<>
-									<p>Bonjour, {googleUser.profileObj.name}</p>
+									<span>
+										Bonjour, {googleUser.profileObj.name}
+									</span>
 								</>
 							)}
 							<LogoutButton />
@@ -70,7 +45,7 @@ const Navigation = () => {
 						<NavLink to="/login" className="list-item">
 							Login
 						</NavLink>
-					)} */}
+					)}
 				</ul>
 			</nav>
 		</header>
