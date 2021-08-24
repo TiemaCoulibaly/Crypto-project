@@ -10,7 +10,7 @@ const Private = () => {
 	let history = useHistory();
 
 	useEffect(() => {
-		if (!localStorage.getItem("authToken")) {
+		if (localStorage.getItem("authToken")) {
 			history.push("/");
 		}
 
@@ -32,7 +32,7 @@ const Private = () => {
 				setPrivateData(data.data);
 			} catch (error) {
 				localStorage.removeItem("authToken");
-				setError("");
+				setError(error);
 			}
 		};
 
@@ -41,16 +41,13 @@ const Private = () => {
 
 	const logoutHandler = () => {
 		localStorage.removeItem("authToken");
-		history.push("/login");
+		history.push("/");
 	};
 
 	return error ? (
 		<span className="error-message">{error}</span>
 	) : (
 		<>
-			<div style={{ background: "green", color: "white" }}>
-				{privateData}
-			</div>
 			<button onClick={logoutHandler}>Se déconnecter</button>
 		</>
 	);
