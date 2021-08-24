@@ -32,10 +32,12 @@ const Navigation = () => {
 								Portfolio
 							</NavLink>
 							{isSignedIn && (
-								<p>Bonjour, {googleUser.profileObj.name}</p>
+								<>
+									<p>Bonjour, {googleUser.profileObj.name}</p>
+									<LogoutButton />
+								</>
 							)}
 							<Private />
-							<LogoutButton />
 						</>
 					) : (
 						<NavLink to="/login" className="list-item">

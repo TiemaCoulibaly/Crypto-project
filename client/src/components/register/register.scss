@@ -1,4 +1,7 @@
 @import "../main.scss";
+a {
+	text-decoration: none;
+}
 
 .register-screen {
 	width: 100%;
@@ -23,9 +26,39 @@
 }
 
 .register-screen__subtext {
+	background-color: $background-color-light;
 	display: block;
 	margin: 0.5rem 0;
 }
 .error-message {
 	color: red;
+}
+.login-btn {
+	@include border-grey();
+	background-color: $background-color-light;
+	text-decoration: none;
+	color: $primary-color;
+	border-radius: 10px;
+
+	padding: 10px;
+	&:hover {
+		box-shadow: 1px 1px $special-color;
+	}
+}
+.register {
+	@include border-grey();
+	background-color: $background-color-light;
+	color: $primary-color;
+	border-radius: 10px;
+	font-size: 18px;
+	padding: 10px;
+	text-align: center;
+	margin: 20px 0px 10px;
+	text-decoration: none;
+
+	width: 100%;
+
+	&:hover {
+		box-shadow: 1px 1px $special-color;
+	}
 }

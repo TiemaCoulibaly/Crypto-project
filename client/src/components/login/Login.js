@@ -84,7 +84,8 @@ const Login = () => {
 						onChange={(e) => setPassword(e.target.value)}
 						tabIndex={2}
 					/>
-					<Link to="/register" className="btn btn-primary">
+
+					<Link to="/register" className="btn-register">
 						S'inscrire
 					</Link>
 

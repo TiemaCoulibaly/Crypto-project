@@ -109,14 +109,14 @@ const Register = ({ history }) => {
 				</div>
 				{error && <span className="error-message">{error}</span>}
 
-				<button type="submit" className="btn btn-primary">
+				<button type="submit" className="register">
 					S'inscrire
 				</button>
 
 				<span className="register-screen__subtext">
 					Vous avez déjà un compte ?{" "}
 					<Link to="/login">
-						<u>Se connecter </u>
+						<span className="login-btn">Se connecter </span>
 					</Link>
 				</span>
 			</form>

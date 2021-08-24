@@ -54,25 +54,23 @@ input {
 .connexion:hover {
 	background-color: white;
 	color: #52b6b2;
-	border: 1px solid #52b6b2;
 }
-button {
+#password {
+	margin-bottom: 20px;
+}
+.btn-register {
 	@include border-grey();
-	color: $background-color-light;
-	margin: 5px;
+	color: black;
+	margin: 10px 5px 10px;
 	padding: 10px;
 	border-radius: 10px;
 	background-color: $special-color;
+	text-decoration: none;
 	&:hover {
 		box-shadow: 2px 2px 2px $primary-color;
 	}
 }
-span > a {
-	&:hover {
-		padding: 5px;
-		box-shadow: 1px 1px $primary-color;
-	}
-}
+
 .error-message {
 	color: red;
 }
@@ -85,9 +83,10 @@ span > a {
 	font-size: 18px;
 	padding: 10px;
 	text-align: center;
-	margin-bottom: 10px;
+	margin: 20px 0px 10px;
 	text-decoration: none;
-	display: block;
+
+	width: 100%;
 
 	&:hover {
 		box-shadow: 1px 1px $primary-color;
