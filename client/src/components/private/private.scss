@@ -1,0 +1,13 @@
+@import "../main.scss";
+.logout {
+	@include border-grey();
+	color: black;
+	margin: 10px 5px 10px;
+	padding: 10px;
+	border-radius: 10px;
+	background-color: $special-color;
+	text-decoration: none;
+	&:hover {
+		box-shadow: 2px 2px 2px $primary-color;
+	}
+}

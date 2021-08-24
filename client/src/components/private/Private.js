@@ -4,6 +4,8 @@ import { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import { axiosInstance } from "../../config";
 
+import "./private.scss";
+
 const Private = () => {
 	const [error, setError] = useState("");
 	const [privateData, setPrivateData] = useState("");
@@ -48,7 +50,9 @@ const Private = () => {
 		<span className="error-message">{error}</span>
 	) : (
 		<>
-			<button onClick={logoutHandler}>Logout</button>
+			<button onClick={logoutHandler} className="logout">
+				Logout
+			</button>
 		</>
 	);
 };
