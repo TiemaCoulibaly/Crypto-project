@@ -32,7 +32,7 @@ const Private = () => {
 				setPrivateData(data.data);
 			} catch (error) {
 				localStorage.removeItem("authToken");
-				setError(error);
+				setError("");
 			}
 		};
 
