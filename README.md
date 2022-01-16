@@ -24,6 +24,9 @@ L'application sera pensée mobile-first mais sera responsive.
 ## Hosting provider
 ![Heroku](https://img.shields.io/badge/heroku-%23430098.svg?style=for-the-badge&logo=heroku&logoColor=white)
 
+### Link to the project
+https://crystal-crypto.herokuapp.com/
+
 ### Définition des objectifs
 
 -   Proposer une interface soignée et épurée, avec une lecture facile des données pour l'utilisateur
