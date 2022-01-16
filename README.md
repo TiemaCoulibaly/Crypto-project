@@ -10,6 +10,9 @@
 Le projet consiste à réaliser un portefeuille électronique qui comprendrait les différentes monnaies électroniques et leurs cours. L'utilisateur aurait tout d'abord accès aux différents cours. En cliquant sur une monnaie en particulier, il peut accéder à plus de détails sur celle-ci. Puis s'il le souhaite, il peut créer un compte ou s'authentifier afin d'accéder à son porte-monnaie électronique.
 L'application sera pensée mobile-first mais sera responsive.
 
+### Link to the project
+https://crystal-crypto.herokuapp.com/
+
 ## Technos utilisées
 [![made-with-HTML](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/fr/docs/Web/HTML)
 [![made-with-CSS](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/fr/docs/Web/CSS)
@@ -24,8 +27,6 @@ L'application sera pensée mobile-first mais sera responsive.
 ## Hosting provider
 ![Heroku](https://img.shields.io/badge/heroku-%23430098.svg?style=for-the-badge&logo=heroku&logoColor=white)
 
-### Link to the project
-https://crystal-crypto.herokuapp.com/
 
 ### Définition des objectifs
 
